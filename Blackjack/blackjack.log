@@ -1,0 +1,304 @@
+INFO application-akka.actor.default-dispatcher-4 de.htwg.blackjack.view.tui - 
+New Blackjack Game created
+INFO application-akka.actor.default-dispatcher-4 de.htwg.blackjack.view.tui - 
+Possible commands: q-quit, n-new game, np-newplayer, h-hit, s-stand, - decreasebet, + increasebet, sb-setbet
+INFO application-akka.actor.default-dispatcher-4 de.htwg.blackjack.view.tui - 
+Es m�ssen Spieler erstellt werden, bevor das Spiel gestartet werden kann
+INFO application-akka.actor.default-dispatcher-4 de.htwg.blackjack.view.tui - 
+Possible commands: q-quit, n-new game, np-newplayer, h-hit, s-stand, - decreasebet, + increasebet, sb-setbet
+INFO application-akka.actor.default-dispatcher-5 de.htwg.blackjack.view.tui - Bitte Spielername angeben
+INFO AWT-EventQueue-0 de.htwg.blackjack.view.tui - 
+Neuer Spieler hinzugef�gt
+INFO AWT-EventQueue-0 de.htwg.blackjack.view.tui - 
+Possible commands: q-quit, n-new game, np-newplayer, h-hit, s-stand, - decreasebet, + increasebet, sb-setbet
+INFO AWT-EventQueue-0 de.htwg.blackjack.view.tui - 
+Spieler jjj, bitte Wette abgeben. Budget: 1500 
+Startwette betr�gt 100
+INFO AWT-EventQueue-0 de.htwg.blackjack.view.tui - 
+Possible commands: q-quit, n-new game, np-newplayer, h-hit, s-stand, - decreasebet, + increasebet, sb-setbet
+INFO application-akka.actor.default-dispatcher-10 de.htwg.blackjack.view.tui - 
+Wette:  200
+INFO application-akka.actor.default-dispatcher-10 de.htwg.blackjack.view.tui - 
+Possible commands: q-quit, n-new game, np-newplayer, h-hit, s-stand, - decreasebet, + increasebet, sb-setbet
+INFO application-akka.actor.default-dispatcher-12 de.htwg.blackjack.view.tui - 
+Wette:  300
+INFO application-akka.actor.default-dispatcher-12 de.htwg.blackjack.view.tui - 
+Possible commands: q-quit, n-new game, np-newplayer, h-hit, s-stand, - decreasebet, + increasebet, sb-setbet
+INFO application-akka.actor.default-dispatcher-13 de.htwg.blackjack.view.tui - 
+Wette:  200
+INFO application-akka.actor.default-dispatcher-13 de.htwg.blackjack.view.tui - 
+Possible commands: q-quit, n-new game, np-newplayer, h-hit, s-stand, - decreasebet, + increasebet, sb-setbet
+INFO application-akka.actor.default-dispatcher-11 de.htwg.blackjack.view.tui - 
+Ihre Wette f�r diese Runde betr�gt 200
+INFO application-akka.actor.default-dispatcher-11 de.htwg.blackjack.view.tui - 
+Possible commands: q-quit, n-new game, np-newplayer, h-hit, s-stand, - decreasebet, + increasebet, sb-setbet
+INFO application-akka.actor.default-dispatcher-11 de.htwg.blackjack.view.tui - 
+Alle Wetten wurden abgegeben
+INFO application-akka.actor.default-dispatcher-11 de.htwg.blackjack.view.tui - 
+Possible commands: q-quit, n-new game, np-newplayer, h-hit, s-stand, - decreasebet, + increasebet, sb-setbet
+INFO application-akka.actor.default-dispatcher-11 de.htwg.blackjack.view.tui - 
+Spieler jjj, ist an der Reihe
+INFO application-akka.actor.default-dispatcher-11 de.htwg.blackjack.view.tui - 
+jjj Handkarten: HERZZWEI KREUZBUBE Wert:12
+Dealer Handkarten: KAROZEHN
+INFO application-akka.actor.default-dispatcher-11 de.htwg.blackjack.view.tui - 
+Possible commands: q-quit, n-new game, np-newplayer, h-hit, s-stand, - decreasebet, + increasebet, sb-setbet
+INFO application-akka.actor.default-dispatcher-11 de.htwg.blackjack.view.tui - 
+jjj  HIT
+INFO application-akka.actor.default-dispatcher-11 de.htwg.blackjack.view.tui - 
+jjj Handkarten: HERZZWEI KREUZBUBE PIKACHT Wert:20
+Dealer Handkarten: KAROZEHN
+INFO application-akka.actor.default-dispatcher-11 de.htwg.blackjack.view.tui - 
+Possible commands: q-quit, n-new game, np-newplayer, h-hit, s-stand, - decreasebet, + increasebet, sb-setbet
+INFO application-akka.actor.default-dispatcher-10 de.htwg.blackjack.view.tui - 
+jjj  STAND
+INFO application-akka.actor.default-dispatcher-10 de.htwg.blackjack.view.tui - 
+jjj Handkarten: HERZZWEI KREUZBUBE PIKACHT Wert:20
+Dealer Handkarten: KAROZEHN
+INFO application-akka.actor.default-dispatcher-10 de.htwg.blackjack.view.tui - 
+Possible commands: q-quit, n-new game, np-newplayer, h-hit, s-stand, - decreasebet, + increasebet, sb-setbet
+INFO application-akka.actor.default-dispatcher-10 de.htwg.blackjack.view.tui - 
+Auswertung:
+Dealer Handkarten: KAROZEHN KAROZWEI HERZBUBE Wert:22
+
+jjj Handkarten: HERZZWEI KREUZBUBE PIKACHT Wert:20
+jjj: Gewonnen    neues Budget:1700
+
+INFO application-akka.actor.default-dispatcher-10 de.htwg.blackjack.view.tui - 
+Possible commands: q-quit, n-new game, np-newplayer, h-hit, s-stand, - decreasebet, + increasebet, sb-setbet
+INFO application-akka.actor.default-dispatcher-15 de.htwg.blackjack.view.tui - 
+New Blackjack Game created
+INFO application-akka.actor.default-dispatcher-15 de.htwg.blackjack.view.tui - 
+Possible commands: q-quit, n-new game, np-newplayer, h-hit, s-stand, - decreasebet, + increasebet, sb-setbet
+INFO application-akka.actor.default-dispatcher-15 de.htwg.blackjack.view.tui - 
+Es müssen Spieler erstellt werden, bevor das Spiel gestartet werden kann
+INFO application-akka.actor.default-dispatcher-15 de.htwg.blackjack.view.tui - 
+Possible commands: q-quit, n-new game, np-newplayer, h-hit, s-stand, - decreasebet, + increasebet, sb-setbet
+INFO application-akka.actor.default-dispatcher-16 de.htwg.blackjack.view.tui - Bitte Spielername angeben
+INFO AWT-EventQueue-0 de.htwg.blackjack.view.tui - 
+Neuer Spieler hinzugefügt
+INFO AWT-EventQueue-0 de.htwg.blackjack.view.tui - 
+Possible commands: q-quit, n-new game, np-newplayer, h-hit, s-stand, - decreasebet, + increasebet, sb-setbet
+INFO application-akka.actor.default-dispatcher-5 de.htwg.blackjack.view.tui - 
+Spieler hjhj, bitte Wette abgeben. Budget: 1500 
+Startwette beträgt 100
+INFO application-akka.actor.default-dispatcher-5 de.htwg.blackjack.view.tui - 
+Possible commands: q-quit, n-new game, np-newplayer, h-hit, s-stand, - decreasebet, + increasebet, sb-setbet
+INFO application-akka.actor.default-dispatcher-17 de.htwg.blackjack.view.tui - 
+Spieler hjhj, bitte Wette abgeben. Budget: 1500 
+Startwette beträgt 100
+INFO application-akka.actor.default-dispatcher-17 de.htwg.blackjack.view.tui - 
+Possible commands: q-quit, n-new game, np-newplayer, h-hit, s-stand, - decreasebet, + increasebet, sb-setbet
+INFO application-akka.actor.default-dispatcher-2 de.htwg.blackjack.view.tui - 
+Wette:  200
+INFO application-akka.actor.default-dispatcher-2 de.htwg.blackjack.view.tui - 
+Possible commands: q-quit, n-new game, np-newplayer, h-hit, s-stand, - decreasebet, + increasebet, sb-setbet
+INFO application-akka.actor.default-dispatcher-17 de.htwg.blackjack.view.tui - 
+Wette:  300
+INFO application-akka.actor.default-dispatcher-17 de.htwg.blackjack.view.tui - 
+Possible commands: q-quit, n-new game, np-newplayer, h-hit, s-stand, - decreasebet, + increasebet, sb-setbet
+INFO application-akka.actor.default-dispatcher-6 de.htwg.blackjack.view.tui - 
+Ihre Wette für diese Runde beträgt 300
+INFO application-akka.actor.default-dispatcher-6 de.htwg.blackjack.view.tui - 
+Possible commands: q-quit, n-new game, np-newplayer, h-hit, s-stand, - decreasebet, + increasebet, sb-setbet
+INFO application-akka.actor.default-dispatcher-6 de.htwg.blackjack.view.tui - 
+Alle Wetten wurden abgegeben
+INFO application-akka.actor.default-dispatcher-6 de.htwg.blackjack.view.tui - 
+Possible commands: q-quit, n-new game, np-newplayer, h-hit, s-stand, - decreasebet, + increasebet, sb-setbet
+INFO application-akka.actor.default-dispatcher-6 de.htwg.blackjack.view.tui - 
+Spieler hjhj, ist an der Reihe
+INFO application-akka.actor.default-dispatcher-6 de.htwg.blackjack.view.tui - 
+hjhj Handkarten: HERZACHT KAROZWEI Wert:10
+Dealer Handkarten: KAROSIEBEN
+INFO application-akka.actor.default-dispatcher-6 de.htwg.blackjack.view.tui - 
+Possible commands: q-quit, n-new game, np-newplayer, h-hit, s-stand, - decreasebet, + increasebet, sb-setbet
+INFO application-akka.actor.default-dispatcher-17 de.htwg.blackjack.view.tui - 
+hjhj  HIT
+INFO application-akka.actor.default-dispatcher-17 de.htwg.blackjack.view.tui - 
+hjhj Handkarten: HERZACHT KAROZWEI PIKNEUN Wert:19
+Dealer Handkarten: KAROSIEBEN
+INFO application-akka.actor.default-dispatcher-17 de.htwg.blackjack.view.tui - 
+Possible commands: q-quit, n-new game, np-newplayer, h-hit, s-stand, - decreasebet, + increasebet, sb-setbet
+INFO application-akka.actor.default-dispatcher-6 de.htwg.blackjack.view.tui - 
+hjhj  BUSTED!
+INFO application-akka.actor.default-dispatcher-6 de.htwg.blackjack.view.tui - 
+hjhj Handkarten: HERZACHT KAROZWEI PIKNEUN KAROBUBE Wert:29
+Dealer Handkarten: KAROSIEBEN
+INFO application-akka.actor.default-dispatcher-6 de.htwg.blackjack.view.tui - 
+Possible commands: q-quit, n-new game, np-newplayer, h-hit, s-stand, - decreasebet, + increasebet, sb-setbet
+INFO application-akka.actor.default-dispatcher-6 de.htwg.blackjack.view.tui - 
+Auswertung:
+Dealer Handkarten: KAROSIEBEN HERZNEUN KREUZKOENIG Wert:26
+
+hjhj Handkarten: HERZACHT KAROZWEI PIKNEUN KAROBUBE Wert:29
+hjhj: Busted    neues Budget:1200
+
+INFO application-akka.actor.default-dispatcher-6 de.htwg.blackjack.view.tui - 
+Possible commands: q-quit, n-new game, np-newplayer, h-hit, s-stand, - decreasebet, + increasebet, sb-setbet
+INFO application-akka.actor.default-dispatcher-6 de.htwg.blackjack.view.tui - 
+Spieler hjhj, bitte Wette abgeben. Budget: 1200 
+Startwette beträgt 100
+INFO application-akka.actor.default-dispatcher-6 de.htwg.blackjack.view.tui - 
+Possible commands: q-quit, n-new game, np-newplayer, h-hit, s-stand, - decreasebet, + increasebet, sb-setbet
+INFO application-akka.actor.default-dispatcher-5 de.htwg.blackjack.view.tui - 
+Spieler hjhj, bitte Wette abgeben. Budget: 1200 
+Startwette beträgt 100
+INFO application-akka.actor.default-dispatcher-5 de.htwg.blackjack.view.tui - 
+Possible commands: q-quit, n-new game, np-newplayer, h-hit, s-stand, - decreasebet, + increasebet, sb-setbet
+INFO application-akka.actor.default-dispatcher-5 de.htwg.blackjack.view.tui - 
+Spieler hjhj, bitte Wette abgeben. Budget: 1200 
+Startwette beträgt 100
+INFO application-akka.actor.default-dispatcher-5 de.htwg.blackjack.view.tui - 
+Possible commands: q-quit, n-new game, np-newplayer, h-hit, s-stand, - decreasebet, + increasebet, sb-setbet
+INFO application-akka.actor.default-dispatcher-5 de.htwg.blackjack.view.tui - 
+Ihre Wette für diese Runde beträgt 100
+INFO application-akka.actor.default-dispatcher-5 de.htwg.blackjack.view.tui - 
+Possible commands: q-quit, n-new game, np-newplayer, h-hit, s-stand, - decreasebet, + increasebet, sb-setbet
+INFO application-akka.actor.default-dispatcher-5 de.htwg.blackjack.view.tui - 
+Alle Wetten wurden abgegeben
+INFO application-akka.actor.default-dispatcher-5 de.htwg.blackjack.view.tui - 
+Possible commands: q-quit, n-new game, np-newplayer, h-hit, s-stand, - decreasebet, + increasebet, sb-setbet
+INFO application-akka.actor.default-dispatcher-5 de.htwg.blackjack.view.tui - 
+Spieler hjhj, ist an der Reihe
+INFO application-akka.actor.default-dispatcher-5 de.htwg.blackjack.view.tui - 
+hjhj Handkarten: KREUZVIER PIKNEUN Wert:13
+Dealer Handkarten: KREUZACHT
+INFO application-akka.actor.default-dispatcher-5 de.htwg.blackjack.view.tui - 
+Possible commands: q-quit, n-new game, np-newplayer, h-hit, s-stand, - decreasebet, + increasebet, sb-setbet
+INFO application-akka.actor.default-dispatcher-6 de.htwg.blackjack.view.tui - 
+hjhj  STAND
+INFO application-akka.actor.default-dispatcher-6 de.htwg.blackjack.view.tui - 
+hjhj Handkarten: KREUZVIER PIKNEUN Wert:13
+Dealer Handkarten: KREUZACHT
+INFO application-akka.actor.default-dispatcher-6 de.htwg.blackjack.view.tui - 
+Possible commands: q-quit, n-new game, np-newplayer, h-hit, s-stand, - decreasebet, + increasebet, sb-setbet
+INFO application-akka.actor.default-dispatcher-6 de.htwg.blackjack.view.tui - 
+Auswertung:
+Dealer Handkarten: KREUZACHT HERZSECHS PIKDAME Wert:24
+
+hjhj Handkarten: KREUZVIER PIKNEUN Wert:13
+hjhj: Gewonnen    neues Budget:1300
+
+INFO application-akka.actor.default-dispatcher-6 de.htwg.blackjack.view.tui - 
+Possible commands: q-quit, n-new game, np-newplayer, h-hit, s-stand, - decreasebet, + increasebet, sb-setbet
+INFO application-akka.actor.default-dispatcher-6 de.htwg.blackjack.view.tui - 
+Spieler hjhj, bitte Wette abgeben. Budget: 1300 
+Startwette beträgt 100
+INFO application-akka.actor.default-dispatcher-6 de.htwg.blackjack.view.tui - 
+Possible commands: q-quit, n-new game, np-newplayer, h-hit, s-stand, - decreasebet, + increasebet, sb-setbet
+INFO application-akka.actor.default-dispatcher-6 de.htwg.blackjack.view.tui - 
+Spieler hjhj, bitte Wette abgeben. Budget: 1300 
+Startwette beträgt 100
+INFO application-akka.actor.default-dispatcher-6 de.htwg.blackjack.view.tui - 
+Possible commands: q-quit, n-new game, np-newplayer, h-hit, s-stand, - decreasebet, + increasebet, sb-setbet
+INFO application-akka.actor.default-dispatcher-6 de.htwg.blackjack.view.tui - 
+Wette:  200
+INFO application-akka.actor.default-dispatcher-6 de.htwg.blackjack.view.tui - 
+Possible commands: q-quit, n-new game, np-newplayer, h-hit, s-stand, - decreasebet, + increasebet, sb-setbet
+INFO application-akka.actor.default-dispatcher-6 de.htwg.blackjack.view.tui - 
+Wette:  300
+INFO application-akka.actor.default-dispatcher-6 de.htwg.blackjack.view.tui - 
+Possible commands: q-quit, n-new game, np-newplayer, h-hit, s-stand, - decreasebet, + increasebet, sb-setbet
+INFO application-akka.actor.default-dispatcher-5 de.htwg.blackjack.view.tui - 
+Spieler hjhj, bitte Wette abgeben. Budget: 1300 
+Startwette beträgt 100
+INFO application-akka.actor.default-dispatcher-5 de.htwg.blackjack.view.tui - 
+Possible commands: q-quit, n-new game, np-newplayer, h-hit, s-stand, - decreasebet, + increasebet, sb-setbet
+INFO application-akka.actor.default-dispatcher-6 de.htwg.blackjack.view.tui - 
+Wette:  400
+INFO application-akka.actor.default-dispatcher-6 de.htwg.blackjack.view.tui - 
+Possible commands: q-quit, n-new game, np-newplayer, h-hit, s-stand, - decreasebet, + increasebet, sb-setbet
+INFO application-akka.actor.default-dispatcher-5 de.htwg.blackjack.view.tui - 
+Wette:  500
+INFO application-akka.actor.default-dispatcher-5 de.htwg.blackjack.view.tui - 
+Possible commands: q-quit, n-new game, np-newplayer, h-hit, s-stand, - decreasebet, + increasebet, sb-setbet
+INFO application-akka.actor.default-dispatcher-5 de.htwg.blackjack.view.tui - 
+Spieler hjhj, bitte Wette abgeben. Budget: 1300 
+Startwette beträgt 100
+INFO application-akka.actor.default-dispatcher-5 de.htwg.blackjack.view.tui - 
+Possible commands: q-quit, n-new game, np-newplayer, h-hit, s-stand, - decreasebet, + increasebet, sb-setbet
+INFO application-akka.actor.default-dispatcher-18 de.htwg.blackjack.view.tui - 
+Wette:  600
+INFO application-akka.actor.default-dispatcher-18 de.htwg.blackjack.view.tui - 
+Possible commands: q-quit, n-new game, np-newplayer, h-hit, s-stand, - decreasebet, + increasebet, sb-setbet
+INFO application-akka.actor.default-dispatcher-5 de.htwg.blackjack.view.tui - 
+Wette:  700
+INFO application-akka.actor.default-dispatcher-5 de.htwg.blackjack.view.tui - 
+Possible commands: q-quit, n-new game, np-newplayer, h-hit, s-stand, - decreasebet, + increasebet, sb-setbet
+INFO application-akka.actor.default-dispatcher-20 de.htwg.blackjack.view.tui - 
+Spieler hjhj, bitte Wette abgeben. Budget: 1300 
+Startwette beträgt 100
+INFO application-akka.actor.default-dispatcher-20 de.htwg.blackjack.view.tui - 
+Possible commands: q-quit, n-new game, np-newplayer, h-hit, s-stand, - decreasebet, + increasebet, sb-setbet
+INFO application-akka.actor.default-dispatcher-5 de.htwg.blackjack.view.tui - 
+Wette:  600
+INFO application-akka.actor.default-dispatcher-5 de.htwg.blackjack.view.tui - 
+Possible commands: q-quit, n-new game, np-newplayer, h-hit, s-stand, - decreasebet, + increasebet, sb-setbet
+INFO application-akka.actor.default-dispatcher-17 de.htwg.blackjack.view.tui - 
+Spieler hjhj, bitte Wette abgeben. Budget: 1300 
+Startwette beträgt 100
+INFO application-akka.actor.default-dispatcher-17 de.htwg.blackjack.view.tui - 
+Possible commands: q-quit, n-new game, np-newplayer, h-hit, s-stand, - decreasebet, + increasebet, sb-setbet
+INFO application-akka.actor.default-dispatcher-5 de.htwg.blackjack.view.tui - 
+Ihre Wette für diese Runde beträgt 600
+INFO application-akka.actor.default-dispatcher-5 de.htwg.blackjack.view.tui - 
+Possible commands: q-quit, n-new game, np-newplayer, h-hit, s-stand, - decreasebet, + increasebet, sb-setbet
+INFO application-akka.actor.default-dispatcher-5 de.htwg.blackjack.view.tui - 
+Alle Wetten wurden abgegeben
+INFO application-akka.actor.default-dispatcher-5 de.htwg.blackjack.view.tui - 
+Possible commands: q-quit, n-new game, np-newplayer, h-hit, s-stand, - decreasebet, + increasebet, sb-setbet
+INFO application-akka.actor.default-dispatcher-5 de.htwg.blackjack.view.tui - 
+Spieler hjhj, ist an der Reihe
+INFO application-akka.actor.default-dispatcher-5 de.htwg.blackjack.view.tui - 
+hjhj Handkarten: HERZVIER PIKZWEI Wert:6
+Dealer Handkarten: KAROSIEBEN
+INFO application-akka.actor.default-dispatcher-5 de.htwg.blackjack.view.tui - 
+Possible commands: q-quit, n-new game, np-newplayer, h-hit, s-stand, - decreasebet, + increasebet, sb-setbet
+INFO application-akka.actor.default-dispatcher-20 de.htwg.blackjack.view.tui - 
+hjhj  STAND
+INFO application-akka.actor.default-dispatcher-20 de.htwg.blackjack.view.tui - 
+hjhj Handkarten: HERZVIER PIKZWEI Wert:6
+Dealer Handkarten: KAROSIEBEN
+INFO application-akka.actor.default-dispatcher-20 de.htwg.blackjack.view.tui - 
+Possible commands: q-quit, n-new game, np-newplayer, h-hit, s-stand, - decreasebet, + increasebet, sb-setbet
+INFO application-akka.actor.default-dispatcher-20 de.htwg.blackjack.view.tui - 
+Auswertung:
+Dealer Handkarten: KAROSIEBEN KAROACHT KARODREI Wert:18
+
+hjhj Handkarten: HERZVIER PIKZWEI Wert:6
+hjhj: Verloren    neues Budget:700
+
+INFO application-akka.actor.default-dispatcher-20 de.htwg.blackjack.view.tui - 
+Possible commands: q-quit, n-new game, np-newplayer, h-hit, s-stand, - decreasebet, + increasebet, sb-setbet
+INFO application-akka.actor.default-dispatcher-7 de.htwg.blackjack.view.tui - 
+New Blackjack Game created
+INFO application-akka.actor.default-dispatcher-7 de.htwg.blackjack.view.tui - 
+Possible commands: q-quit, n-new game, np-newplayer, h-hit, s-stand, - decreasebet, + increasebet, sb-setbet
+INFO application-akka.actor.default-dispatcher-7 de.htwg.blackjack.view.tui - 
+Es müssen Spieler erstellt werden, bevor das Spiel gestartet werden kann
+INFO application-akka.actor.default-dispatcher-7 de.htwg.blackjack.view.tui - 
+Possible commands: q-quit, n-new game, np-newplayer, h-hit, s-stand, - decreasebet, + increasebet, sb-setbet
+INFO application-akka.actor.default-dispatcher-2 de.htwg.blackjack.view.tui - 
+New Blackjack Game created
+INFO application-akka.actor.default-dispatcher-2 de.htwg.blackjack.view.tui - 
+Possible commands: q-quit, n-new game, np-newplayer, h-hit, s-stand, - decreasebet, + increasebet, sb-setbet
+INFO application-akka.actor.default-dispatcher-2 de.htwg.blackjack.view.tui - 
+Es müssen Spieler erstellt werden, bevor das Spiel gestartet werden kann
+INFO application-akka.actor.default-dispatcher-2 de.htwg.blackjack.view.tui - 
+Possible commands: q-quit, n-new game, np-newplayer, h-hit, s-stand, - decreasebet, + increasebet, sb-setbet
+INFO application-akka.actor.default-dispatcher-6 de.htwg.blackjack.view.tui - 
+New Blackjack Game created
+INFO application-akka.actor.default-dispatcher-6 de.htwg.blackjack.view.tui - 
+Possible commands: q-quit, n-new game, np-newplayer, h-hit, s-stand, - decreasebet, + increasebet, sb-setbet
+INFO application-akka.actor.default-dispatcher-6 de.htwg.blackjack.view.tui - 
+Es müssen Spieler erstellt werden, bevor das Spiel gestartet werden kann
+INFO application-akka.actor.default-dispatcher-6 de.htwg.blackjack.view.tui - 
+Possible commands: q-quit, n-new game, np-newplayer, h-hit, s-stand, - decreasebet, + increasebet, sb-setbet
+INFO application-akka.actor.default-dispatcher-5 de.htwg.blackjack.view.tui - 
+New Blackjack Game created
+INFO application-akka.actor.default-dispatcher-5 de.htwg.blackjack.view.tui - 
+Possible commands: q-quit, n-new game, np-newplayer, h-hit, s-stand, - decreasebet, + increasebet, sb-setbet
+INFO application-akka.actor.default-dispatcher-5 de.htwg.blackjack.view.tui - 
+Es müssen Spieler erstellt werden, bevor das Spiel gestartet werden kann
+INFO application-akka.actor.default-dispatcher-5 de.htwg.blackjack.view.tui - 
+Possible commands: q-quit, n-new game, np-newplayer, h-hit, s-stand, - decreasebet, + increasebet, sb-setbet
