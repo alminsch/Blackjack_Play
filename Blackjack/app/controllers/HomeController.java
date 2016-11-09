@@ -1,7 +1,8 @@
 package controllers;
 
 import play.mvc.*;
-
+import de.htwg.blackjack.Blackjack;
+import de.htwg.blackjack.controller.IController;
 import views.html.*;
 
 /**
@@ -16,8 +17,10 @@ public class HomeController extends Controller {
      * this method will be called when the application receives a
      * <code>GET</code> request with a path of <code>/</code>.
      */
+
     public Result index() {
-        return ok(index.render("Your new application is ready."));
+    	IController controller = Blackjack.getInstance().getController();
+        return ok(index.render("Your new application is ready.")); //controller));
     }
 
 }
