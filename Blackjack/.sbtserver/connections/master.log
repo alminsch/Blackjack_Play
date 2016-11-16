@@ -1,25 +1,13 @@
-New log file opened at Wed Nov 09 12:13:05 CET 2016 by 5653@Alexs-MacBook-Pro.local
-Taking next connection to: 60864
-New client attempting to connect on port: 60865-60864
-  Address = /172.20.131.175:60864
-This client on port 60865 has uuid 77acc633-c58f-4785-b73e-1920fabcc41e configName activator humanReadableName Activator protocolVersion 3 featureTags Vector()
-Connected Clients: activator-77acc633-c58f-4785-b73e-1920fabcc41e
-Taking next connection to: 60864
-New client attempting to connect on port: 60873-60864
-  Address = /172.20.131.175:60864
-Handshake exception on socket: 60873
-sbt.impl.ipc.HandshakeException: Unable to perform handshake
-	at sbt.impl.ipc.Peer.handshake(IPC.scala:46)
-	at sbt.impl.ipc.MultiClientServer.<init>(IPC.scala:150)
-	at sbt.server.SbtServerSocketHandler$$anon$1.run(SbtServerSocketHandler.scala:43)
-Caused by: java.io.EOFException
-	at java.io.DataInputStream.readInt(DataInputStream.java:392)
-	at sbt.impl.ipc.Peer.receive(IPC.scala:95)
-	at sbt.impl.ipc.Peer.handshake(IPC.scala:49)
-	... 2 more
-Taking next connection to: 60864
-New client attempting to connect on port: 60874-60864
-  Address = /172.20.131.175:60864
-This client on port 60874 has uuid b55b587c-ace5-4580-beea-d41dad990311 configName activator humanReadableName Activator protocolVersion 3 featureTags Vector()
-Connected Clients: activator-b55b587c-ace5-4580-beea-d41dad990311
-Taking next connection to: 60864
+New log file opened at Wed Nov 09 12:15:24 CET 2016 by 5668@Alexs-MacBook-Pro.local
+Taking next connection to: 60881
+New client attempting to connect on port: 60882-60881
+  Address = /172.20.131.175:60881
+This client on port 60882 has uuid cfc77007-3ff2-4c5b-a024-13c64cce3363 configName activator humanReadableName Activator protocolVersion 3 featureTags Vector()
+Connected Clients: activator-cfc77007-3ff2-4c5b-a024-13c64cce3363
+Taking next connection to: 60881
+Checking to see if clients are empty...
+No non-daemon clients connected after 3 min. Shutting down.
+Server socket thread exiting.
+0 clients open, will close them...
+All client sockets have been closed.
+Closing the 5668@Alexs-MacBook-Pro.local logs at Wed Nov 09 12:18:25 CET 2016, goodbye.
