@@ -20,7 +20,7 @@ public class HomeController extends Controller {
 
     public Result index() {
     	IController controller = Blackjack.getInstance().getController();
-        return ok(index.render("Your new application is ready.")); //controller));
+        return ok(index.render("Your new application is ready.",controller));
     }
 
 }
