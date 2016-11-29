@@ -302,3 +302,460 @@ INFO application-akka.actor.default-dispatcher-5 de.htwg.blackjack.view.tui -
 Es mÃ¼ssen Spieler erstellt werden, bevor das Spiel gestartet werden kann
 INFO application-akka.actor.default-dispatcher-5 de.htwg.blackjack.view.tui - 
 Possible commands: q-quit, n-new game, np-newplayer, h-hit, s-stand, - decreasebet, + increasebet, sb-setbet
+INFO application-akka.actor.default-dispatcher-2 de.htwg.blackjack.view.tui - 
+New Blackjack Game created
+INFO application-akka.actor.default-dispatcher-2 de.htwg.blackjack.view.tui - 
+Possible commands: q-quit, n-new game, np-newplayer, h-hit, s-stand, - decreasebet, + increasebet, sb-setbet
+INFO ForkJoinPool-1-worker-1 de.htwg.blackjack.view.tui - 
+New Blackjack Game created
+INFO ForkJoinPool-1-worker-1 de.htwg.blackjack.view.tui - 
+Possible commands: q-quit, n-new game, np-newplayer, h-hit, s-stand, - decreasebet, + increasebet, sb-setbet
+INFO ForkJoinPool-1-worker-1 de.htwg.blackjack.view.tui - 
+New Blackjack Game created
+INFO ForkJoinPool-1-worker-1 de.htwg.blackjack.view.tui - 
+Possible commands: q-quit, n-new game, np-newplayer, h-hit, s-stand, - decreasebet, + increasebet, sb-setbet
+INFO AWT-EventQueue-0 de.htwg.blackjack.view.tui - 
+Es müssen Spieler erstellt werden, bevor das Spiel gestartet werden kann
+INFO AWT-EventQueue-0 de.htwg.blackjack.view.tui - 
+Possible commands: q-quit, n-new game, np-newplayer, h-hit, s-stand, - decreasebet, + increasebet, sb-setbet
+INFO AWT-EventQueue-0 de.htwg.blackjack.view.tui - 
+Neuer Spieler hinzugefügt
+INFO AWT-EventQueue-0 de.htwg.blackjack.view.tui - 
+Possible commands: q-quit, n-new game, np-newplayer, h-hit, s-stand, - decreasebet, + increasebet, sb-setbet
+INFO AWT-EventQueue-0 de.htwg.blackjack.view.tui - 
+Spieler df, bitte Wette abgeben. Budget: 1500 
+Startwette beträgt 100
+INFO AWT-EventQueue-0 de.htwg.blackjack.view.tui - 
+Possible commands: q-quit, n-new game, np-newplayer, h-hit, s-stand, - decreasebet, + increasebet, sb-setbet
+INFO AWT-EventQueue-0 de.htwg.blackjack.view.tui - 
+Ihre Wette für diese Runde beträgt 100
+INFO AWT-EventQueue-0 de.htwg.blackjack.view.tui - 
+Possible commands: q-quit, n-new game, np-newplayer, h-hit, s-stand, - decreasebet, + increasebet, sb-setbet
+INFO AWT-EventQueue-0 de.htwg.blackjack.view.tui - 
+Alle Wetten wurden abgegeben
+INFO AWT-EventQueue-0 de.htwg.blackjack.view.tui - 
+Possible commands: q-quit, n-new game, np-newplayer, h-hit, s-stand, - decreasebet, + increasebet, sb-setbet
+INFO AWT-EventQueue-0 de.htwg.blackjack.view.tui - 
+Spieler df, ist an der Reihe
+INFO AWT-EventQueue-0 de.htwg.blackjack.view.tui - 
+df Handkarten: KREUZSIEBEN KREUZDAME Wert:17
+Dealer Handkarten: PIKVIER
+INFO AWT-EventQueue-0 de.htwg.blackjack.view.tui - 
+Possible commands: q-quit, n-new game, np-newplayer, h-hit, s-stand, - decreasebet, + increasebet, sb-setbet
+INFO ForkJoinPool-1-worker-1 de.htwg.blackjack.view.tui - 
+New Blackjack Game created
+INFO ForkJoinPool-1-worker-1 de.htwg.blackjack.view.tui - 
+Possible commands: q-quit, n-new game, np-newplayer, h-hit, s-stand, - decreasebet, + increasebet, sb-setbet
+INFO application-akka.actor.default-dispatcher-6 de.htwg.blackjack.view.tui - 
+Es müssen Spieler erstellt werden, bevor das Spiel gestartet werden kann
+INFO application-akka.actor.default-dispatcher-6 de.htwg.blackjack.view.tui - 
+Possible commands: q-quit, n-new game, np-newplayer, h-hit, s-stand, - decreasebet, + increasebet, sb-setbet
+INFO AWT-EventQueue-0 de.htwg.blackjack.view.tui - 
+Neuer Spieler hinzugefügt
+INFO AWT-EventQueue-0 de.htwg.blackjack.view.tui - 
+Possible commands: q-quit, n-new game, np-newplayer, h-hit, s-stand, - decreasebet, + increasebet, sb-setbet
+INFO AWT-EventQueue-0 de.htwg.blackjack.view.tui - 
+Spieler sdf, bitte Wette abgeben. Budget: 1500 
+Startwette beträgt 100
+INFO AWT-EventQueue-0 de.htwg.blackjack.view.tui - 
+Possible commands: q-quit, n-new game, np-newplayer, h-hit, s-stand, - decreasebet, + increasebet, sb-setbet
+INFO AWT-EventQueue-0 de.htwg.blackjack.view.tui - 
+Ihre Wette für diese Runde beträgt 100
+INFO AWT-EventQueue-0 de.htwg.blackjack.view.tui - 
+Possible commands: q-quit, n-new game, np-newplayer, h-hit, s-stand, - decreasebet, + increasebet, sb-setbet
+INFO AWT-EventQueue-0 de.htwg.blackjack.view.tui - 
+Alle Wetten wurden abgegeben
+INFO AWT-EventQueue-0 de.htwg.blackjack.view.tui - 
+Possible commands: q-quit, n-new game, np-newplayer, h-hit, s-stand, - decreasebet, + increasebet, sb-setbet
+INFO AWT-EventQueue-0 de.htwg.blackjack.view.tui - 
+Spieler sdf, ist an der Reihe
+INFO AWT-EventQueue-0 de.htwg.blackjack.view.tui - 
+sdf Handkarten: HERZSECHS HERZFUENF Wert:11
+Dealer Handkarten: KREUZDAME
+INFO AWT-EventQueue-0 de.htwg.blackjack.view.tui - 
+Possible commands: q-quit, n-new game, np-newplayer, h-hit, s-stand, - decreasebet, + increasebet, sb-setbet
+INFO ForkJoinPool-1-worker-1 de.htwg.blackjack.view.tui - 
+New Blackjack Game created
+INFO ForkJoinPool-1-worker-1 de.htwg.blackjack.view.tui - 
+Possible commands: q-quit, n-new game, np-newplayer, h-hit, s-stand, - decreasebet, + increasebet, sb-setbet
+INFO AWT-EventQueue-0 de.htwg.blackjack.view.tui - 
+Neuer Spieler hinzugefügt
+INFO AWT-EventQueue-0 de.htwg.blackjack.view.tui - 
+Possible commands: q-quit, n-new game, np-newplayer, h-hit, s-stand, - decreasebet, + increasebet, sb-setbet
+INFO AWT-EventQueue-0 de.htwg.blackjack.view.tui - 
+Spieler df, bitte Wette abgeben. Budget: 1500 
+Startwette beträgt 100
+INFO AWT-EventQueue-0 de.htwg.blackjack.view.tui - 
+Possible commands: q-quit, n-new game, np-newplayer, h-hit, s-stand, - decreasebet, + increasebet, sb-setbet
+INFO AWT-EventQueue-0 de.htwg.blackjack.view.tui - 
+Ihre Wette für diese Runde beträgt 100
+INFO AWT-EventQueue-0 de.htwg.blackjack.view.tui - 
+Possible commands: q-quit, n-new game, np-newplayer, h-hit, s-stand, - decreasebet, + increasebet, sb-setbet
+INFO AWT-EventQueue-0 de.htwg.blackjack.view.tui - 
+Alle Wetten wurden abgegeben
+INFO AWT-EventQueue-0 de.htwg.blackjack.view.tui - 
+Possible commands: q-quit, n-new game, np-newplayer, h-hit, s-stand, - decreasebet, + increasebet, sb-setbet
+INFO AWT-EventQueue-0 de.htwg.blackjack.view.tui - 
+Spieler df, ist an der Reihe
+INFO AWT-EventQueue-0 de.htwg.blackjack.view.tui - 
+df Handkarten: HERZKOENIG KREUZZWEI Wert:12
+Dealer Handkarten: KREUZBUBE
+INFO AWT-EventQueue-0 de.htwg.blackjack.view.tui - 
+Possible commands: q-quit, n-new game, np-newplayer, h-hit, s-stand, - decreasebet, + increasebet, sb-setbet
+INFO ForkJoinPool-1-worker-1 de.htwg.blackjack.view.tui - 
+New Blackjack Game created
+INFO ForkJoinPool-1-worker-1 de.htwg.blackjack.view.tui - 
+Possible commands: q-quit, n-new game, np-newplayer, h-hit, s-stand, - decreasebet, + increasebet, sb-setbet
+INFO application-akka.actor.default-dispatcher-8 de.htwg.blackjack.view.tui - 
+Es müssen Spieler erstellt werden, bevor das Spiel gestartet werden kann
+INFO application-akka.actor.default-dispatcher-8 de.htwg.blackjack.view.tui - 
+Possible commands: q-quit, n-new game, np-newplayer, h-hit, s-stand, - decreasebet, + increasebet, sb-setbet
+INFO ForkJoinPool-1-worker-1 de.htwg.blackjack.view.tui - 
+New Blackjack Game created
+INFO ForkJoinPool-1-worker-1 de.htwg.blackjack.view.tui - 
+Possible commands: q-quit, n-new game, np-newplayer, h-hit, s-stand, - decreasebet, + increasebet, sb-setbet
+INFO ForkJoinPool-1-worker-1 de.htwg.blackjack.view.tui - 
+New Blackjack Game created
+INFO ForkJoinPool-1-worker-1 de.htwg.blackjack.view.tui - 
+Possible commands: q-quit, n-new game, np-newplayer, h-hit, s-stand, - decreasebet, + increasebet, sb-setbet
+INFO ForkJoinPool-1-worker-1 de.htwg.blackjack.view.tui - 
+New Blackjack Game created
+INFO ForkJoinPool-1-worker-1 de.htwg.blackjack.view.tui - 
+Possible commands: q-quit, n-new game, np-newplayer, h-hit, s-stand, - decreasebet, + increasebet, sb-setbet
+INFO ForkJoinPool-1-worker-1 de.htwg.blackjack.view.tui - 
+New Blackjack Game created
+INFO ForkJoinPool-1-worker-1 de.htwg.blackjack.view.tui - 
+Possible commands: q-quit, n-new game, np-newplayer, h-hit, s-stand, - decreasebet, + increasebet, sb-setbet
+INFO ForkJoinPool-1-worker-1 de.htwg.blackjack.view.tui - 
+New Blackjack Game created
+INFO ForkJoinPool-1-worker-1 de.htwg.blackjack.view.tui - 
+Possible commands: q-quit, n-new game, np-newplayer, h-hit, s-stand, - decreasebet, + increasebet, sb-setbet
+INFO ForkJoinPool-1-worker-1 de.htwg.blackjack.view.tui - 
+New Blackjack Game created
+INFO ForkJoinPool-1-worker-1 de.htwg.blackjack.view.tui - 
+Possible commands: q-quit, n-new game, np-newplayer, h-hit, s-stand, - decreasebet, + increasebet, sb-setbet
+INFO ForkJoinPool-1-worker-2 de.htwg.blackjack.view.tui - 
+New Blackjack Game created
+INFO ForkJoinPool-1-worker-2 de.htwg.blackjack.view.tui - 
+Possible commands: q-quit, n-new game, np-newplayer, h-hit, s-stand, - decreasebet, + increasebet, sb-setbet
+INFO ForkJoinPool-1-worker-1 de.htwg.blackjack.view.tui - 
+New Blackjack Game created
+INFO ForkJoinPool-1-worker-1 de.htwg.blackjack.view.tui - 
+Possible commands: q-quit, n-new game, np-newplayer, h-hit, s-stand, - decreasebet, + increasebet, sb-setbet
+INFO ForkJoinPool-1-worker-1 de.htwg.blackjack.view.tui - 
+New Blackjack Game created
+INFO ForkJoinPool-1-worker-1 de.htwg.blackjack.view.tui - 
+Possible commands: q-quit, n-new game, np-newplayer, h-hit, s-stand, - decreasebet, + increasebet, sb-setbet
+INFO ForkJoinPool-1-worker-2 de.htwg.blackjack.view.tui - 
+New Blackjack Game created
+INFO ForkJoinPool-1-worker-2 de.htwg.blackjack.view.tui - 
+Possible commands: q-quit, n-new game, np-newplayer, h-hit, s-stand, - decreasebet, + increasebet, sb-setbet
+INFO AWT-EventQueue-0 de.htwg.blackjack.view.tui - 
+Es müssen Spieler erstellt werden, bevor das Spiel gestartet werden kann
+INFO AWT-EventQueue-0 de.htwg.blackjack.view.tui - 
+Possible commands: q-quit, n-new game, np-newplayer, h-hit, s-stand, - decreasebet, + increasebet, sb-setbet
+INFO AWT-EventQueue-0 de.htwg.blackjack.view.tui - 
+Neuer Spieler hinzugefügt
+INFO AWT-EventQueue-0 de.htwg.blackjack.view.tui - 
+Possible commands: q-quit, n-new game, np-newplayer, h-hit, s-stand, - decreasebet, + increasebet, sb-setbet
+INFO AWT-EventQueue-0 de.htwg.blackjack.view.tui - 
+Spieler df, bitte Wette abgeben. Budget: 1500 
+Startwette beträgt 100
+INFO AWT-EventQueue-0 de.htwg.blackjack.view.tui - 
+Possible commands: q-quit, n-new game, np-newplayer, h-hit, s-stand, - decreasebet, + increasebet, sb-setbet
+INFO AWT-EventQueue-0 de.htwg.blackjack.view.tui - 
+Ihre Wette für diese Runde beträgt 100
+INFO AWT-EventQueue-0 de.htwg.blackjack.view.tui - 
+Possible commands: q-quit, n-new game, np-newplayer, h-hit, s-stand, - decreasebet, + increasebet, sb-setbet
+INFO AWT-EventQueue-0 de.htwg.blackjack.view.tui - 
+Alle Wetten wurden abgegeben
+INFO AWT-EventQueue-0 de.htwg.blackjack.view.tui - 
+Possible commands: q-quit, n-new game, np-newplayer, h-hit, s-stand, - decreasebet, + increasebet, sb-setbet
+INFO AWT-EventQueue-0 de.htwg.blackjack.view.tui - 
+Spieler df, ist an der Reihe
+INFO AWT-EventQueue-0 de.htwg.blackjack.view.tui - 
+df Handkarten: KAROVIER PIKSIEBEN Wert:11
+Dealer Handkarten: PIKZEHN
+INFO AWT-EventQueue-0 de.htwg.blackjack.view.tui - 
+Possible commands: q-quit, n-new game, np-newplayer, h-hit, s-stand, - decreasebet, + increasebet, sb-setbet
+INFO ForkJoinPool-1-worker-1 de.htwg.blackjack.view.tui - 
+New Blackjack Game created
+INFO ForkJoinPool-1-worker-1 de.htwg.blackjack.view.tui - 
+Possible commands: q-quit, n-new game, np-newplayer, h-hit, s-stand, - decreasebet, + increasebet, sb-setbet
+INFO AWT-EventQueue-0 de.htwg.blackjack.view.tui - 
+Neuer Spieler hinzugefügt
+INFO AWT-EventQueue-0 de.htwg.blackjack.view.tui - 
+Possible commands: q-quit, n-new game, np-newplayer, h-hit, s-stand, - decreasebet, + increasebet, sb-setbet
+INFO AWT-EventQueue-0 de.htwg.blackjack.view.tui - 
+Spieler dfdf, bitte Wette abgeben. Budget: 1500 
+Startwette beträgt 100
+INFO AWT-EventQueue-0 de.htwg.blackjack.view.tui - 
+Possible commands: q-quit, n-new game, np-newplayer, h-hit, s-stand, - decreasebet, + increasebet, sb-setbet
+INFO AWT-EventQueue-0 de.htwg.blackjack.view.tui - 
+Ihre Wette für diese Runde beträgt 100
+INFO AWT-EventQueue-0 de.htwg.blackjack.view.tui - 
+Possible commands: q-quit, n-new game, np-newplayer, h-hit, s-stand, - decreasebet, + increasebet, sb-setbet
+INFO AWT-EventQueue-0 de.htwg.blackjack.view.tui - 
+Alle Wetten wurden abgegeben
+INFO AWT-EventQueue-0 de.htwg.blackjack.view.tui - 
+Possible commands: q-quit, n-new game, np-newplayer, h-hit, s-stand, - decreasebet, + increasebet, sb-setbet
+INFO AWT-EventQueue-0 de.htwg.blackjack.view.tui - 
+Spieler dfdf, ist an der Reihe
+INFO AWT-EventQueue-0 de.htwg.blackjack.view.tui - 
+dfdf Handkarten: PIKZWEI KREUZBUBE Wert:12
+Dealer Handkarten: KAROVIER
+INFO AWT-EventQueue-0 de.htwg.blackjack.view.tui - 
+Possible commands: q-quit, n-new game, np-newplayer, h-hit, s-stand, - decreasebet, + increasebet, sb-setbet
+INFO ForkJoinPool-1-worker-1 de.htwg.blackjack.view.tui - 
+New Blackjack Game created
+INFO ForkJoinPool-1-worker-1 de.htwg.blackjack.view.tui - 
+Possible commands: q-quit, n-new game, np-newplayer, h-hit, s-stand, - decreasebet, + increasebet, sb-setbet
+INFO ForkJoinPool-1-worker-1 de.htwg.blackjack.view.tui - 
+New Blackjack Game created
+INFO ForkJoinPool-1-worker-1 de.htwg.blackjack.view.tui - 
+Possible commands: q-quit, n-new game, np-newplayer, h-hit, s-stand, - decreasebet, + increasebet, sb-setbet
+INFO application-akka.actor.default-dispatcher-15 de.htwg.blackjack.view.tui - 
+Es müssen Spieler erstellt werden, bevor das Spiel gestartet werden kann
+INFO application-akka.actor.default-dispatcher-15 de.htwg.blackjack.view.tui - 
+Possible commands: q-quit, n-new game, np-newplayer, h-hit, s-stand, - decreasebet, + increasebet, sb-setbet
+INFO ForkJoinPool-1-worker-1 de.htwg.blackjack.view.tui - 
+New Blackjack Game created
+INFO ForkJoinPool-1-worker-1 de.htwg.blackjack.view.tui - 
+Possible commands: q-quit, n-new game, np-newplayer, h-hit, s-stand, - decreasebet, + increasebet, sb-setbet
+INFO AWT-EventQueue-0 de.htwg.blackjack.view.tui - 
+Neuer Spieler hinzugefügt
+INFO AWT-EventQueue-0 de.htwg.blackjack.view.tui - 
+Possible commands: q-quit, n-new game, np-newplayer, h-hit, s-stand, - decreasebet, + increasebet, sb-setbet
+INFO AWT-EventQueue-0 de.htwg.blackjack.view.tui - 
+Spieler dfd, bitte Wette abgeben. Budget: 1500 
+Startwette beträgt 100
+INFO AWT-EventQueue-0 de.htwg.blackjack.view.tui - 
+Possible commands: q-quit, n-new game, np-newplayer, h-hit, s-stand, - decreasebet, + increasebet, sb-setbet
+INFO AWT-EventQueue-0 de.htwg.blackjack.view.tui - 
+Ihre Wette für diese Runde beträgt 100
+INFO AWT-EventQueue-0 de.htwg.blackjack.view.tui - 
+Possible commands: q-quit, n-new game, np-newplayer, h-hit, s-stand, - decreasebet, + increasebet, sb-setbet
+INFO AWT-EventQueue-0 de.htwg.blackjack.view.tui - 
+Alle Wetten wurden abgegeben
+INFO AWT-EventQueue-0 de.htwg.blackjack.view.tui - 
+Possible commands: q-quit, n-new game, np-newplayer, h-hit, s-stand, - decreasebet, + increasebet, sb-setbet
+INFO AWT-EventQueue-0 de.htwg.blackjack.view.tui - 
+Spieler dfd, ist an der Reihe
+INFO AWT-EventQueue-0 de.htwg.blackjack.view.tui - 
+dfd Handkarten: PIKBUBE KAROFUENF Wert:15
+Dealer Handkarten: HERZSIEBEN
+INFO AWT-EventQueue-0 de.htwg.blackjack.view.tui - 
+Possible commands: q-quit, n-new game, np-newplayer, h-hit, s-stand, - decreasebet, + increasebet, sb-setbet
+INFO ForkJoinPool-1-worker-1 de.htwg.blackjack.view.tui - 
+New Blackjack Game created
+INFO ForkJoinPool-1-worker-1 de.htwg.blackjack.view.tui - 
+Possible commands: q-quit, n-new game, np-newplayer, h-hit, s-stand, - decreasebet, + increasebet, sb-setbet
+INFO AWT-EventQueue-0 de.htwg.blackjack.view.tui - 
+Neuer Spieler hinzugefügt
+INFO AWT-EventQueue-0 de.htwg.blackjack.view.tui - 
+Possible commands: q-quit, n-new game, np-newplayer, h-hit, s-stand, - decreasebet, + increasebet, sb-setbet
+INFO AWT-EventQueue-0 de.htwg.blackjack.view.tui - 
+Spieler er, bitte Wette abgeben. Budget: 1500 
+Startwette beträgt 100
+INFO AWT-EventQueue-0 de.htwg.blackjack.view.tui - 
+Possible commands: q-quit, n-new game, np-newplayer, h-hit, s-stand, - decreasebet, + increasebet, sb-setbet
+INFO ForkJoinPool-1-worker-1 de.htwg.blackjack.view.tui - 
+New Blackjack Game created
+INFO ForkJoinPool-1-worker-1 de.htwg.blackjack.view.tui - 
+Possible commands: q-quit, n-new game, np-newplayer, h-hit, s-stand, - decreasebet, + increasebet, sb-setbet
+INFO AWT-EventQueue-0 de.htwg.blackjack.view.tui - 
+Neuer Spieler hinzugefügt
+INFO AWT-EventQueue-0 de.htwg.blackjack.view.tui - 
+Possible commands: q-quit, n-new game, np-newplayer, h-hit, s-stand, - decreasebet, + increasebet, sb-setbet
+INFO AWT-EventQueue-0 de.htwg.blackjack.view.tui - 
+Spieler df, bitte Wette abgeben. Budget: 1500 
+Startwette beträgt 100
+INFO AWT-EventQueue-0 de.htwg.blackjack.view.tui - 
+Possible commands: q-quit, n-new game, np-newplayer, h-hit, s-stand, - decreasebet, + increasebet, sb-setbet
+INFO AWT-EventQueue-0 de.htwg.blackjack.view.tui - 
+Ihre Wette für diese Runde beträgt 100
+INFO AWT-EventQueue-0 de.htwg.blackjack.view.tui - 
+Possible commands: q-quit, n-new game, np-newplayer, h-hit, s-stand, - decreasebet, + increasebet, sb-setbet
+INFO AWT-EventQueue-0 de.htwg.blackjack.view.tui - 
+Alle Wetten wurden abgegeben
+INFO AWT-EventQueue-0 de.htwg.blackjack.view.tui - 
+Possible commands: q-quit, n-new game, np-newplayer, h-hit, s-stand, - decreasebet, + increasebet, sb-setbet
+INFO AWT-EventQueue-0 de.htwg.blackjack.view.tui - 
+Spieler df, ist an der Reihe
+INFO AWT-EventQueue-0 de.htwg.blackjack.view.tui - 
+df Handkarten: KAROKOENIG HERZNEUN Wert:19
+Dealer Handkarten: PIKDAME
+INFO AWT-EventQueue-0 de.htwg.blackjack.view.tui - 
+Possible commands: q-quit, n-new game, np-newplayer, h-hit, s-stand, - decreasebet, + increasebet, sb-setbet
+INFO ForkJoinPool-1-worker-1 de.htwg.blackjack.view.tui - 
+New Blackjack Game created
+INFO ForkJoinPool-1-worker-1 de.htwg.blackjack.view.tui - 
+Possible commands: q-quit, n-new game, np-newplayer, h-hit, s-stand, - decreasebet, + increasebet, sb-setbet
+INFO AWT-EventQueue-0 de.htwg.blackjack.view.tui - 
+Neuer Spieler hinzugefügt
+INFO AWT-EventQueue-0 de.htwg.blackjack.view.tui - 
+Possible commands: q-quit, n-new game, np-newplayer, h-hit, s-stand, - decreasebet, + increasebet, sb-setbet
+INFO AWT-EventQueue-0 de.htwg.blackjack.view.tui - 
+Spieler ddf, bitte Wette abgeben. Budget: 1500 
+Startwette beträgt 100
+INFO AWT-EventQueue-0 de.htwg.blackjack.view.tui - 
+Possible commands: q-quit, n-new game, np-newplayer, h-hit, s-stand, - decreasebet, + increasebet, sb-setbet
+INFO application-akka.actor.default-dispatcher-5 de.htwg.blackjack.view.tui - 
+Ihre Wette für diese Runde beträgt 100
+INFO application-akka.actor.default-dispatcher-5 de.htwg.blackjack.view.tui - 
+Possible commands: q-quit, n-new game, np-newplayer, h-hit, s-stand, - decreasebet, + increasebet, sb-setbet
+INFO application-akka.actor.default-dispatcher-5 de.htwg.blackjack.view.tui - 
+Alle Wetten wurden abgegeben
+INFO application-akka.actor.default-dispatcher-5 de.htwg.blackjack.view.tui - 
+Possible commands: q-quit, n-new game, np-newplayer, h-hit, s-stand, - decreasebet, + increasebet, sb-setbet
+INFO application-akka.actor.default-dispatcher-5 de.htwg.blackjack.view.tui - 
+Spieler ddf, ist an der Reihe
+INFO application-akka.actor.default-dispatcher-5 de.htwg.blackjack.view.tui - 
+ddf Handkarten: KAROBUBE KAROVIER Wert:14
+Dealer Handkarten: HERZDREI
+INFO application-akka.actor.default-dispatcher-5 de.htwg.blackjack.view.tui - 
+Possible commands: q-quit, n-new game, np-newplayer, h-hit, s-stand, - decreasebet, + increasebet, sb-setbet
+INFO ForkJoinPool-1-worker-1 de.htwg.blackjack.view.tui - 
+New Blackjack Game created
+INFO ForkJoinPool-1-worker-1 de.htwg.blackjack.view.tui - 
+Possible commands: q-quit, n-new game, np-newplayer, h-hit, s-stand, - decreasebet, + increasebet, sb-setbet
+INFO AWT-EventQueue-0 de.htwg.blackjack.view.tui - 
+Neuer Spieler hinzugefügt
+INFO AWT-EventQueue-0 de.htwg.blackjack.view.tui - 
+Possible commands: q-quit, n-new game, np-newplayer, h-hit, s-stand, - decreasebet, + increasebet, sb-setbet
+INFO AWT-EventQueue-0 de.htwg.blackjack.view.tui - 
+Spieler dfd, bitte Wette abgeben. Budget: 1500 
+Startwette beträgt 100
+INFO AWT-EventQueue-0 de.htwg.blackjack.view.tui - 
+Possible commands: q-quit, n-new game, np-newplayer, h-hit, s-stand, - decreasebet, + increasebet, sb-setbet
+INFO application-akka.actor.default-dispatcher-4 de.htwg.blackjack.view.tui - 
+Ihre Wette für diese Runde beträgt 100
+INFO application-akka.actor.default-dispatcher-4 de.htwg.blackjack.view.tui - 
+Possible commands: q-quit, n-new game, np-newplayer, h-hit, s-stand, - decreasebet, + increasebet, sb-setbet
+INFO application-akka.actor.default-dispatcher-4 de.htwg.blackjack.view.tui - 
+Alle Wetten wurden abgegeben
+INFO application-akka.actor.default-dispatcher-4 de.htwg.blackjack.view.tui - 
+Possible commands: q-quit, n-new game, np-newplayer, h-hit, s-stand, - decreasebet, + increasebet, sb-setbet
+INFO application-akka.actor.default-dispatcher-4 de.htwg.blackjack.view.tui - 
+Spieler dfd, ist an der Reihe
+INFO application-akka.actor.default-dispatcher-4 de.htwg.blackjack.view.tui - 
+dfd Handkarten: HERZDAME KAROVIER Wert:14
+Dealer Handkarten: KREUZSECHS
+INFO application-akka.actor.default-dispatcher-4 de.htwg.blackjack.view.tui - 
+Possible commands: q-quit, n-new game, np-newplayer, h-hit, s-stand, - decreasebet, + increasebet, sb-setbet
+INFO ForkJoinPool-1-worker-1 de.htwg.blackjack.view.tui - 
+New Blackjack Game created
+INFO ForkJoinPool-1-worker-1 de.htwg.blackjack.view.tui - 
+Possible commands: q-quit, n-new game, np-newplayer, h-hit, s-stand, - decreasebet, + increasebet, sb-setbet
+INFO AWT-EventQueue-0 de.htwg.blackjack.view.tui - 
+Neuer Spieler hinzugefügt
+INFO AWT-EventQueue-0 de.htwg.blackjack.view.tui - 
+Possible commands: q-quit, n-new game, np-newplayer, h-hit, s-stand, - decreasebet, + increasebet, sb-setbet
+INFO AWT-EventQueue-0 de.htwg.blackjack.view.tui - 
+Spieler ddf, bitte Wette abgeben. Budget: 1500 
+Startwette beträgt 100
+INFO AWT-EventQueue-0 de.htwg.blackjack.view.tui - 
+Possible commands: q-quit, n-new game, np-newplayer, h-hit, s-stand, - decreasebet, + increasebet, sb-setbet
+INFO application-akka.actor.default-dispatcher-2 de.htwg.blackjack.view.tui - 
+Wette:  200
+INFO application-akka.actor.default-dispatcher-2 de.htwg.blackjack.view.tui - 
+Possible commands: q-quit, n-new game, np-newplayer, h-hit, s-stand, - decreasebet, + increasebet, sb-setbet
+INFO application-akka.actor.default-dispatcher-5 de.htwg.blackjack.view.tui - 
+Wette:  100
+INFO application-akka.actor.default-dispatcher-5 de.htwg.blackjack.view.tui - 
+Possible commands: q-quit, n-new game, np-newplayer, h-hit, s-stand, - decreasebet, + increasebet, sb-setbet
+INFO application-akka.actor.default-dispatcher-5 de.htwg.blackjack.view.tui - 
+Wette:  200
+INFO application-akka.actor.default-dispatcher-5 de.htwg.blackjack.view.tui - 
+Possible commands: q-quit, n-new game, np-newplayer, h-hit, s-stand, - decreasebet, + increasebet, sb-setbet
+INFO application-akka.actor.default-dispatcher-5 de.htwg.blackjack.view.tui - 
+Ihre Wette für diese Runde beträgt 200
+INFO application-akka.actor.default-dispatcher-5 de.htwg.blackjack.view.tui - 
+Possible commands: q-quit, n-new game, np-newplayer, h-hit, s-stand, - decreasebet, + increasebet, sb-setbet
+INFO application-akka.actor.default-dispatcher-5 de.htwg.blackjack.view.tui - 
+Alle Wetten wurden abgegeben
+INFO application-akka.actor.default-dispatcher-5 de.htwg.blackjack.view.tui - 
+Possible commands: q-quit, n-new game, np-newplayer, h-hit, s-stand, - decreasebet, + increasebet, sb-setbet
+INFO application-akka.actor.default-dispatcher-5 de.htwg.blackjack.view.tui - 
+Spieler ddf, ist an der Reihe
+INFO application-akka.actor.default-dispatcher-5 de.htwg.blackjack.view.tui - 
+ddf Handkarten: HERZZEHN PIKFUENF Wert:15
+Dealer Handkarten: KREUZZWEI
+INFO application-akka.actor.default-dispatcher-5 de.htwg.blackjack.view.tui - 
+Possible commands: q-quit, n-new game, np-newplayer, h-hit, s-stand, - decreasebet, + increasebet, sb-setbet
+INFO ForkJoinPool-1-worker-1 de.htwg.blackjack.view.tui - 
+New Blackjack Game created
+INFO ForkJoinPool-1-worker-1 de.htwg.blackjack.view.tui - 
+Possible commands: q-quit, n-new game, np-newplayer, h-hit, s-stand, - decreasebet, + increasebet, sb-setbet
+INFO ForkJoinPool-1-worker-1 de.htwg.blackjack.view.tui - 
+New Blackjack Game created
+INFO ForkJoinPool-1-worker-1 de.htwg.blackjack.view.tui - 
+Possible commands: q-quit, n-new game, np-newplayer, h-hit, s-stand, - decreasebet, + increasebet, sb-setbet
+INFO AWT-EventQueue-0 de.htwg.blackjack.view.tui - 
+Neuer Spieler hinzugefügt
+INFO AWT-EventQueue-0 de.htwg.blackjack.view.tui - 
+Possible commands: q-quit, n-new game, np-newplayer, h-hit, s-stand, - decreasebet, + increasebet, sb-setbet
+INFO AWT-EventQueue-0 de.htwg.blackjack.view.tui - 
+Spieler df, bitte Wette abgeben. Budget: 1500 
+Startwette beträgt 100
+INFO AWT-EventQueue-0 de.htwg.blackjack.view.tui - 
+Possible commands: q-quit, n-new game, np-newplayer, h-hit, s-stand, - decreasebet, + increasebet, sb-setbet
+INFO application-akka.actor.default-dispatcher-6 de.htwg.blackjack.view.tui - 
+Wette:  200
+INFO application-akka.actor.default-dispatcher-6 de.htwg.blackjack.view.tui - 
+Possible commands: q-quit, n-new game, np-newplayer, h-hit, s-stand, - decreasebet, + increasebet, sb-setbet
+INFO application-akka.actor.default-dispatcher-7 de.htwg.blackjack.view.tui - 
+Ihre Wette für diese Runde beträgt 200
+INFO application-akka.actor.default-dispatcher-7 de.htwg.blackjack.view.tui - 
+Possible commands: q-quit, n-new game, np-newplayer, h-hit, s-stand, - decreasebet, + increasebet, sb-setbet
+INFO application-akka.actor.default-dispatcher-7 de.htwg.blackjack.view.tui - 
+Alle Wetten wurden abgegeben
+INFO application-akka.actor.default-dispatcher-7 de.htwg.blackjack.view.tui - 
+Possible commands: q-quit, n-new game, np-newplayer, h-hit, s-stand, - decreasebet, + increasebet, sb-setbet
+INFO application-akka.actor.default-dispatcher-7 de.htwg.blackjack.view.tui - 
+Spieler df, ist an der Reihe
+INFO application-akka.actor.default-dispatcher-7 de.htwg.blackjack.view.tui - 
+df Handkarten: PIKDAME HERZASS Wert:11
+Dealer Handkarten: KREUZFUENF
+INFO application-akka.actor.default-dispatcher-7 de.htwg.blackjack.view.tui - 
+Possible commands: q-quit, n-new game, np-newplayer, h-hit, s-stand, - decreasebet, + increasebet, sb-setbet
+INFO application-akka.actor.default-dispatcher-10 de.htwg.blackjack.view.tui - 
+df  STAND
+INFO application-akka.actor.default-dispatcher-10 de.htwg.blackjack.view.tui - 
+df Handkarten: PIKDAME HERZASS Wert:11
+Dealer Handkarten: KREUZFUENF
+INFO application-akka.actor.default-dispatcher-10 de.htwg.blackjack.view.tui - 
+Possible commands: q-quit, n-new game, np-newplayer, h-hit, s-stand, - decreasebet, + increasebet, sb-setbet
+INFO application-akka.actor.default-dispatcher-10 de.htwg.blackjack.view.tui - 
+Auswertung:
+Dealer Handkarten: KREUZFUENF PIKVIER HERZSIEBEN PIKKOENIG Wert:26
+
+df Handkarten: PIKDAME HERZASS Wert:11
+df: Gewonnen    neues Budget:1700
+
+INFO application-akka.actor.default-dispatcher-10 de.htwg.blackjack.view.tui - 
+Possible commands: q-quit, n-new game, np-newplayer, h-hit, s-stand, - decreasebet, + increasebet, sb-setbet
+INFO AWT-EventQueue-0 de.htwg.blackjack.view.tui - 
+Spieler df, bitte Wette abgeben. Budget: 1700 
+Startwette beträgt 100
+INFO AWT-EventQueue-0 de.htwg.blackjack.view.tui - 
+Possible commands: q-quit, n-new game, np-newplayer, h-hit, s-stand, - decreasebet, + increasebet, sb-setbet
+INFO application-akka.actor.default-dispatcher-12 de.htwg.blackjack.view.tui - 
+Wette:  200
+INFO application-akka.actor.default-dispatcher-12 de.htwg.blackjack.view.tui - 
+Possible commands: q-quit, n-new game, np-newplayer, h-hit, s-stand, - decreasebet, + increasebet, sb-setbet
+INFO application-akka.actor.default-dispatcher-12 de.htwg.blackjack.view.tui - 
+Ihre Wette für diese Runde beträgt 200
+INFO application-akka.actor.default-dispatcher-12 de.htwg.blackjack.view.tui - 
+Possible commands: q-quit, n-new game, np-newplayer, h-hit, s-stand, - decreasebet, + increasebet, sb-setbet
+INFO application-akka.actor.default-dispatcher-12 de.htwg.blackjack.view.tui - 
+Alle Wetten wurden abgegeben
+INFO application-akka.actor.default-dispatcher-12 de.htwg.blackjack.view.tui - 
+Possible commands: q-quit, n-new game, np-newplayer, h-hit, s-stand, - decreasebet, + increasebet, sb-setbet
+INFO application-akka.actor.default-dispatcher-12 de.htwg.blackjack.view.tui - 
+Spieler df, ist an der Reihe
+INFO application-akka.actor.default-dispatcher-12 de.htwg.blackjack.view.tui - 
+df Handkarten: KREUZACHT PIKACHT Wert:16
+Dealer Handkarten: KREUZDREI
+INFO application-akka.actor.default-dispatcher-12 de.htwg.blackjack.view.tui - 
+Possible commands: q-quit, n-new game, np-newplayer, h-hit, s-stand, - decreasebet, + increasebet, sb-setbet

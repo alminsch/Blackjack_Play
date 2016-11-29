@@ -12,9 +12,10 @@ libraryDependencies ++= Seq(
   cache,
   javaWs,
   "log4j" % "log4j" % "1.2.17"
-  
 )
 // Compile the project before generating Eclipse files, so that generated .scala or .class files for views and routes are present
 EclipseKeys.preTasks := Seq(compile in Compile)
+
+fork in run := true
 
 fork in run := true
