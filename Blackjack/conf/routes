@@ -2,11 +2,14 @@
 # This file defines all application routes (Higher priority routes first)
 # ~~~~
 
-GET     /                           controllers.BlackjackController.index()
+GET     /                           controllers.BlackjackController.start()
+
 
 GET		/blackjack/:command			controllers.BlackjackController.blackjack(command: String)
 
-GET     /spielregeln                controllers.BlackjackController.spielregeln()
+GET		/bj							controllers.BlackjackController.index()
+
+GET     /rules                		controllers.BlackjackController.rules()
 
 GET     /json                       controllers.BlackjackController.json()
 

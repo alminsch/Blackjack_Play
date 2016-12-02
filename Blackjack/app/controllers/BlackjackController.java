@@ -1,11 +1,8 @@
 package controllers;
 
-import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-
-import com.fasterxml.jackson.databind.JsonNode;
 
 import de.htwg.blackjack.Blackjack;
 import de.htwg.blackjack.controller.IController;
@@ -15,8 +12,7 @@ import de.htwg.blackjack.view.tui.TextUI;
 import play.libs.Json;
 import play.mvc.Controller;
 import play.mvc.Result;
-import views.html.blackjack;
-import views.html.index;
+import views.html.*;
 
 public class BlackjackController extends Controller {
 	
@@ -27,13 +23,16 @@ public class BlackjackController extends Controller {
  		tui.userinputselection(command);
 		return ok(tui.getTUI());
 	}
-
-	public Result spielregeln() {
-		return ok(blackjack.render());
+	
+	public Result start() {
+		return ok(start.render("Start Page"));
+	}
+	
+	public Result rules() {
+		return ok(rules.render("Spielregeln"));
 	}
 
 	public Result index() {
-
         return ok(index.render("Your new application is ready.",controller));
     }
 

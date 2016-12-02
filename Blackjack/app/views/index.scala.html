@@ -1,7 +1,3 @@
-@*
- * This template takes a single argument, a String containing a
- * message to display.
- *@
 @(message: String, controller : de.htwg.blackjack.controller.IController)
 
 @main("Welcome to Play") {
@@ -25,63 +21,68 @@
 	      });
 		}
 	</script>
-	<p>&nbsp;</p><p>&nbsp;</p>
-	<nav class="navbar navbar-default" role="navigation">
-	  <!-- Brand and toggle get grouped for better mobile display -->
-	  <div class="navbar-header">
-	    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-	      <span class="sr-only">Toggle navigation</span>
-	      <span class="icon-bar"></span>
-	      <span class="icon-bar"></span>
-	      <span class="icon-bar"></span>
-	    </button>
-	  </div>
-
-	  <!-- Collect the nav links, forms, and other content for toggling -->
-	  <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-	    <ul class="nav navbar-nav">
-	      <li class="dropdown">
-	      <a href="#" class="dropdown-toggle" data-toggle="dropdown">File <b class="caret"></b></a>
-	        <ul class="dropdown-menu">
-	          <li><a href="/command/n">New</a></li>
-	          <li class="divider"></li>
-	          <li><a href="/command/q">Quit</a></li>
-	        </ul>
-	      </li>
-
-	      <li class="dropdown">
-	      <a href="#" class="dropdown-toggle" data-toggle="dropdown">Options <b class="caret"></b></a>
-	        <ul class="dropdown-menu">
-	          <li><a href="/newPlayer/Testobjekt">Add Player</a></li>
-	        </ul>
-	      </li>
-	    </ul>
-	  </div><!-- /.navbar-collapse -->
-	</nav>
 	
-	<div>
-		<button type="button" class="btn btn-default" onclick="getCards()">Get Cards</button>
+	<div class="container">
+		<nav class="navbar navbar-default" role="navigation">
+		  <!-- Brand and toggle get grouped for better mobile display -->
+		  <div class="navbar-header">
+		    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+		      <span class="sr-only">Toggle navigation</span>
+		      <span class="icon-bar"></span>
+		      <span class="icon-bar"></span>
+		      <span class="icon-bar"></span>
+		    </button>
+		  </div>
+	
+		  <!-- Collect the nav links, forms, and other content for toggling -->
+		  <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+		    <ul class="nav navbar-nav">
+		      <li class="dropdown">
+		      <a href="#" class="dropdown-toggle" data-toggle="dropdown">File <b class="caret"></b></a>
+		        <ul class="dropdown-menu">
+		          <li><a href="/command/n">New</a></li>
+		          <li class="divider"></li>
+		          <li><a href="/command/q">Quit</a></li>
+		        </ul>
+		      </li>
+	
+		      <li class="dropdown">
+		      <a href="#" class="dropdown-toggle" data-toggle="dropdown">Options <b class="caret"></b></a>
+		        <ul class="dropdown-menu">
+		          <li><a href="/newPlayer/Testobjekt">Add Player</a></li>
+		        </ul>
+		      </li>
+		    </ul>
+		  </div><!-- /.navbar-collapse -->
+		</nav>
+	
+		<div>
+			<button type="button" class="btn btn-default" onclick="getCards()">Get Cards</button>
+		</div>
+		
+		<div>
+			<button type="button" class="btn btn-default" onclick="jsonCommand('sb')">Set Bet</button>
+		</div>
+		
+		<div>
+			<button type="button" class="btn btn-default" onclick="jsonCommand('+')">Increase Bet</button>
+		</div>
+		
+		<div>
+			<button type="button" class="btn btn-default" onclick="jsonCommand('-')">Decrease Bet</button>
+		</div>
+		
+		<div>
+			<button type="button" class="btn btn-default" onclick="jsonCommand('h')">Hit</button>
+		</div>
+		
+		<div>
+			<button type="button" class="btn btn-default" onclick="jsonCommand('s')">Stand</button>
+		</div>
+		
+		@message
+		<p>&nbsp;</p>
 	</div>
-	
-	<div>
-		<button type="button" class="btn btn-default" onclick="jsonCommand('sb')">Set Bet</button>
-	</div>
-	
-	<div>
-		<button type="button" class="btn btn-default" onclick="jsonCommand('+')">Increase Bet</button>
-	</div>
-	
-	<div>
-		<button type="button" class="btn btn-default" onclick="jsonCommand('-')">Decrease Bet</button>
-	</div>
-	
-	<div>
-		<button type="button" class="btn btn-default" onclick="jsonCommand('h')">Hit</button>
-	</div>
-	
-	<div>
-		<button type="button" class="btn btn-default" onclick="jsonCommand('s')">Stand</button>
-	</div>
-	
-	@message
+    
+		
 }
