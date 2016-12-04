@@ -48,12 +48,13 @@ public class BlackjackController extends Controller {
 			List<Card> cards = p.getCardsInHand();
 			obj.put(p.getPlayerName(), cards);
 			}
-		String json = Json.stringify(Json.toJson((obj)));
+		String json = Json.stringify(Json.toJson(obj));
 		return ok(json);
 	}
 	
 	public Result addNewPlayer(String playerName) {
-		controller.addnewPlayer(playerName); //rückgabewert: wenn erfolgreich Spieler hinzugefügt worden ist
+		controller.addnewPlayer(playerName); 
+		//todo:rückgabewert: wenn erfolgreich Spieler hinzugefügt worden ist?
 		return ok();
 	}
 	
