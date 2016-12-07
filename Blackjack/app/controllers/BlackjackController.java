@@ -1,5 +1,6 @@
 package controllers;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -41,14 +42,31 @@ public class BlackjackController extends Controller {
 		return json();
 	}
 
+	
 	public Result json() {
-		Map<String, Object> obj = new HashMap<String, Object>();
-		List<Player> players = controller.getPlayerList();
-		for(Player p : players) {
-			List<Card> cards = p.getCardsInHand();
-			obj.put(p.getPlayerName(), cards);
-			}
-		String json = Json.stringify(Json.toJson(obj));
+		List<Map> array = new ArrayList<Map>();
+
+		Map<String, Object> players = new HashMap<String, Object>();
+		Map<String, Object> cards = new HashMap<String, Object>();
+		Map<String, Object> dealer = new HashMap<String, Object>();
+		
+	
+		List<String> playerlist = new ArrayList<String>();
+		
+		List<List> cardArray = new ArrayList<List>();
+		for(Player p : controller.getPlayerList()) {
+			playerlist.add(p.getPlayerName());
+			cardArray.add(p.getCardsInHand());
+		}
+		
+		players.put("players", playerlist);
+		cards.put("cards", cardArray);
+		dealer.put("dealer", controller.getDealerCards());
+
+		array.add(players);
+		array.add(cards);
+
+		String json = Json.stringify(Json.toJson(array));
 		return ok(json);
 	}
 	

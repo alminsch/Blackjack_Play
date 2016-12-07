@@ -7,8 +7,12 @@
 	<script language="JavaScript">
 		function getCards() {
 		$.get('/json',
-	      function(data) {
-	          window.alert(data);
+	    	function(data) {
+		    	var json = JSON.parse(data);
+	          	var excard = json[1].cards[0][0];
+	          	var excardurl = "/assets/images/" + excard + ".png";
+	          	window.alert(excardurl);
+	          	$('loadImage').src = excardurl;
 	      });
 		}
 	</script>
@@ -17,11 +21,9 @@
 		function jsonCommand(command) {
 		$.post('/json/' + command,
 	      function(data) {
-		      var json = JSON.parse(data);
-
-		      var key = Object.keyAt(json, 0);
-		      var val = obj[key];
-	          window.alert(json.fddf);
+	          window.alert(data);
+				
+		      
 	      });
 		}
 	</script>
@@ -82,6 +84,10 @@
 		
 		<div>
 			<button type="button" class="btn btn-default" onclick="jsonCommand('s')">Stand</button>
+		</div>
+		
+		<div id="loadImage-wrap">
+    		<img id="loadImage" src="/assets/images/HERZFUENF.png"/>
 		</div>
 		
 		@message
