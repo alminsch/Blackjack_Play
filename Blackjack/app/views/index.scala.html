@@ -61,36 +61,166 @@
 		    </ul>
 		  </div><!-- /.navbar-collapse -->
 		</nav>
-	
-		<div>
-			<button type="button" class="btn btn-default" onclick="getCards()">Get Cards</button>
+		
+		<div class="row">
+			<div class="col-md-1">
+				<button type="button" class="btn btn-default" onclick="getCards()">Get Cards</button>
+			</div>
+			<div class="col-md-1"></div>
+			<div class="col-md-1">
+				<button type="button" class="btn btn-default" onclick="jsonCommand('+')">+ Bet</button>
+			</div>
+			<div class="col-md-1">
+				<button type="button" class="btn btn-default" onclick="jsonCommand('-')">- Bet</button>
+			</div>
+			<div class="col-md-1">
+				<button type="button" class="btn btn-default" onclick="jsonCommand('sb')">Set Bet</button>
+			</div>
+			<div class="col-md-1">
+			
+			</div>
+			<div class="col-md-1">
+				<button type="button" class="btn btn-default" onclick="jsonCommand('h')">Hit</button>
+			</div>
+			<div class="col-md-1">
+				<button type="button" class="btn btn-default" onclick="jsonCommand('s')">Stand</button>
+			</div>
+			<div class="col-md-1">
+			
+			</div>
+			<div class="col-md-1">
+			
+			</div>
+			<div class="col-md-1">
+			
+			</div>
+			<div class="col-md-1">
+			
+			</div>
+		</div>
+		<p>&nbsp;</p>
+		<div class="row">
+			<div class="col-md-1">
+				<div>Playername</div>
+				<div>Karten-Wert</div>
+				<div>Budget</div>
+					
+			</div>
+			<div class="col-md-2">
+				<img id="lg1-1" class="img-responsive" src="/assets/images/KAROFUENF.png"/>
+			    <img id="lg1-2" class="img-responsive" src="/assets/images/HERZFUENF.png"/>
+			    <img id="lg1-3" class="img-responsive" src="/assets/images/HERZFUENF.png"/>
+			</div>
+			
 		</div>
 		
-		<div>
-			<button type="button" class="btn btn-default" onclick="jsonCommand('sb')">Set Bet</button>
+		<div class="row">
+			<div class="col-md-1">
+				<div>Playername</div>
+				<div>Karten-Wert</div>
+				<div>Budget</div>
+					
+			</div>
+			<div class="col-md-2">
+
+				<img id="lg1-1" class="img-responsive" src="/assets/images/KAROFUENF.png"/>
+			    <img id="lg1-2" class="img-responsive" src="/assets/images/HERZFUENF.png"/>
+			    <img id="lg1-3" class="img-responsive" src="/assets/images/HERZFUENF.png"/>
+			    <img id="lg1-4" class="img-responsive" src="/assets/images/KAROFUENF.png"/>
+			    <img id="lg1-5" class="img-responsive" src="/assets/images/HERZFUENF.png"/>
+			    <img id="lg1-6" class="img-responsive" src="/assets/images/HERZFUENF.png"/>
+			</div>
+			<div class="col-md-1">
+				<div>Playername</div>
+				<div>Karten-Wert</div>
+				<div>Budget</div>
+					
+			</div>
+			<div class="col-md-2">
+
+				<img id="lg1-1" class="img-responsive" src="/assets/images/KAROFUENF.png"/>
+			    <img id="lg1-2" class="img-responsive" src="/assets/images/HERZFUENF.png"/>
+			    <img id="lg1-3" class="img-responsive" src="/assets/images/HERZFUENF.png"/>
+			    <img id="lg1-4" class="img-responsive" src="/assets/images/KAROFUENF.png"/>
+			    <img id="lg1-5" class="img-responsive" src="/assets/images/HERZFUENF.png"/>
+			    <img id="lg1-6" class="img-responsive" src="/assets/images/HERZFUENF.png"/>
+			</div>
+			<div class="col-md-1">
+				<div>Playername</div>
+				<div>Karten-Wert</div>
+				<div>Budget</div>
+					
+			</div>
+			<div class="col-md-2">
+
+				<img id="lg1-1" class="img-responsive" src="/assets/images/KAROFUENF.png"/>
+			    <img id="lg1-2" class="img-responsive" src="/assets/images/HERZFUENF.png"/>
+			    <img id="lg1-3" class="img-responsive" src="/assets/images/HERZFUENF.png"/>
+			    <img id="lg1-4" class="img-responsive" src="/assets/images/KAROFUENF.png"/>
+			    <img id="lg1-5" class="img-responsive" src="/assets/images/HERZFUENF.png"/>
+			    <img id="lg1-6" class="img-responsive" src="/assets/images/HERZFUENF.png"/>
+			</div>
+			<div class="col-md-1">
+				<div>Playername</div>
+				<div>Karten-Wert</div>
+				<div>Budget</div>
+					
+			</div>
+			<div class="col-md-2">
+
+				<img id="lg1-1" class="img-responsive" src="/assets/images/KAROFUENF.png"/>
+			    <img id="lg1-2" class="img-responsive" src="/assets/images/HERZFUENF.png"/>
+			    <img id="lg1-3" class="img-responsive" src="/assets/images/HERZFUENF.png"/>
+			    <img id="lg1-4" class="img-responsive" src="/assets/images/KAROFUENF.png"/>
+			    <img id="lg1-5" class="img-responsive" src="/assets/images/HERZFUENF.png"/>
+			    <img id="lg1-6" class="img-responsive" src="/assets/images/HERZFUENF.png"/>
+			</div>
+			
 		</div>
 		
-		<div>
-			<button type="button" class="btn btn-default" onclick="jsonCommand('+')">Increase Bet</button>
-		</div>
 		
-		<div>
-			<button type="button" class="btn btn-default" onclick="jsonCommand('-')">Decrease Bet</button>
-		</div>
 		
-		<div>
-			<button type="button" class="btn btn-default" onclick="jsonCommand('h')">Hit</button>
-		</div>
+		<p>&nbsp;</p>
 		
-		<div>
-			<button type="button" class="btn btn-default" onclick="jsonCommand('s')">Stand</button>
-		</div>
-		
-		<div id="loadImage-wrap">
-    		<img id="loadImage" src="/assets/images/HERZFUENF.png"/>
-		</div>
-		
-		@message
+		<ul class="list-inline list-unstyled">
+			<li>
+				<ul class="list-group">
+				    <img id="lg1-1" class="img-responsive" src="/assets/images/KAROFUENF.png"/>
+				    <img id="lg1-2" class="img-responsive" src="/assets/images/HERZFUENF.png"/>
+				    <img id="lg1-3" class="img-responsive" src="/assets/images/HERZFUENF.png"/>
+				    <img id="lg1-4" class="img-responsive" src="/assets/images/HERZFUENF.png"/>
+				    <img id="lg1-5" class="img-responsive" src="/assets/images/HERZFUENF.png"/>
+				    <img id="lg1-6" class="img-responsive" src="/assets/images/HERZFUENF.png"/>
+				    <img id="lg1-7" class="img-responsive" src="/assets/images/HERZFUENF.png"/>
+				    <img id="lg1-8" class="img-responsive" src="/assets/images/HERZFUENF.png"/>
+				</ul>
+			</li>
+			<li>
+				<ul class="list-group">
+				    <img id="lg1-1" class="img-responsive" src="/assets/images/KAROFUENF.png"/>
+				    <img id="lg1-2" class="img-responsive" src="/assets/images/HERZFUENF.png"/>
+				    <img id="lg1-3" class="img-responsive" src="/assets/images/HERZFUENF.png"/>
+				    <img id="lg1-4" class="img-responsive" src="/assets/images/HERZFUENF.png"/>
+				    <img id="lg1-5" class="img-responsive" src="/assets/images/HERZFUENF.png"/>
+				    <img id="lg1-6" class="img-responsive" src="/assets/images/HERZFUENF.png"/>
+				    <img id="lg1-7" class="img-responsive" src="/assets/images/HERZFUENF.png"/>
+				    <img id="lg1-8" class="img-responsive" src="/assets/images/HERZFUENF.png"/>
+				</ul>
+			</li>
+			<li>
+				<ul class="list-group">
+				    <img id="lg1-1" class="img-responsive" src="/assets/images/KAROFUENF.png"/>
+				    <img id="lg1-2" class="img-responsive" src="/assets/images/HERZFUENF.png"/>
+				    <img id="lg1-3" class="img-responsive" src="/assets/images/HERZFUENF.png"/>
+				    <img id="lg1-4" class="img-responsive" src="/assets/images/HERZFUENF.png"/>
+				    <img id="lg1-5" class="img-responsive" src="/assets/images/HERZFUENF.png"/>
+				    <img id="lg1-6" class="img-responsive" src="/assets/images/HERZFUENF.png"/>
+				    <img id="lg1-7" class="img-responsive" src="/assets/images/HERZFUENF.png"/>
+				    <img id="lg1-8" class="img-responsive" src="/assets/images/HERZFUENF.png"/>
+				</ul>
+			</li>
+		</ul>
+		<img id="loadImage" class="img-responsive" src="/assets/images/HERZFUENF.png"/>
 		<p>&nbsp;</p>
 	</div>
     
