@@ -22,7 +22,7 @@ public class BlackjackController extends Controller {
 	public Result blackjack(String command) {
  		TextUI tui = Blackjack.getInstance().getTUI();
  		tui.userinputselection(command);
-		return ok(tui.getTUI());
+		return ok();
 	}
 	
 	public Result start() {

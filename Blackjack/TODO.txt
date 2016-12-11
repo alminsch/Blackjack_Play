@@ -1,0 +1,17 @@
+- Anzeige Player Name, Kartenwert, Budget (json, css)
+
+- Anzeige Dealer Cards (json, css)
+
+- Bet Anzeige (json, css)
+
+- Anzeige Text-Guide (json, css)
+
+-> evtl. neue jquery Anfrage
+
+- Blackjack Aussehen Website + html Footer + Spielregeln
+
+- Positionen anpassen(mit negativ margin) oder besserer Weg als Bootstrap-Grid, um Karten anzuzeigen 
+
+- WebSockets? (!In Play,a method in the Controller returns a WebSocket instead of a Result)
+
+- im eigl.Blackjackgame String Rückgabe von Playername, kartenwert, Budget pro player; Bet Anzeige; Text-Guide
