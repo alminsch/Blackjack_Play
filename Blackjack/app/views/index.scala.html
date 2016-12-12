@@ -8,11 +8,26 @@
 		function getCards() {
 		$.get('/json',
 	    	function(data) {
+	    		// Player Cards
 		    	var json = JSON.parse(data);
-	          	var excard = json[1].cards[0][0];
-	          	var excardurl = "/assets/images/" + excard + ".png";
-	          	window.alert(excardurl);
-	          	$('loadImage').src = excardurl;
+	          	var cards = json[1].cards;
+	          	var players = cards.length;
+	          	for (var i = 0; i < players; i++) {
+					var playerCards = cards[i];
+					var amountPlayerCards = playerCards.length;
+					for (var j = 0; j < amountPlayerCards; j++) {
+						var cardPath = "/assets/images/" + playerCards[j] + ".png";
+						$("#pc" + i + "-" + j).attr("src", cardPath);
+					}
+	          	}
+	          	// Player Name, Kartenwert, Budget
+
+				// Dealer Cards
+
+				// Bet Anzeige
+
+				// Text Guide
+	          	
 	      });
 		}
 	</script>
@@ -20,11 +35,19 @@
 	<script language="JavaScript">
 		function jsonCommand(command) {
 		$.post('/json/' + command,
-	      function(data) {
-	          window.alert(data);
-				
-		      
-	      });
+			function(data) {
+	    		var json = JSON.parse(data);
+	          	var cards = json[1].cards;
+	          	var players = cards.length;
+	          	for (var i = 0; i < players; i++) {
+					var playerCards = cards[i];
+					var amountPlayerCards = playerCards.length;
+					for (var j = 0; j < amountPlayerCards; j++) {
+						var cardPath = "/assets/images/" + playerCards[j] + ".png";
+						$("#pc" + i + "-" + j).attr("src", cardPath);
+					}
+	          	}
+      		});
 		}
 	</script>
 	
@@ -46,9 +69,9 @@
 		      <li class="dropdown">
 		      <a href="#" class="dropdown-toggle" data-toggle="dropdown">File <b class="caret"></b></a>
 		        <ul class="dropdown-menu">
-		          <li><a href="/command/n">New</a></li>
+		          <li><a href="" onclick="jsonCommand('n')">New</a></li>
 		          <li class="divider"></li>
-		          <li><a href="/command/q">Quit</a></li>
+		          <li><a href="" onclick="jsonCommand('q')">Quit</a></li>
 		        </ul>
 		      </li>
 	
@@ -61,36 +84,119 @@
 		    </ul>
 		  </div><!-- /.navbar-collapse -->
 		</nav>
+		
+		<div class="row">
+			<div class="col-md-1">
+				<button type="button" class="btn btn-default" onclick="getCards()">Get Cards</button>
+			</div>
+			<div class="col-md-1"></div>
+			<div class="col-md-1">
+				<button type="button" class="btn btn-default" onclick="jsonCommand('+')">+ Bet</button>
+			</div>
+			<div class="col-md-1">
+				<button type="button" class="btn btn-default" onclick="jsonCommand('-')">- Bet</button>
+			</div>
+			<div class="col-md-1">
+				<button type="button" class="btn btn-default" onclick="jsonCommand('sb')">Set Bet</button>
+			</div>
+			<div class="col-md-1">
+			
+			</div>
+			<div class="col-md-1">
+				<button type="button" class="btn btn-default" onclick="jsonCommand('h')">Hit</button>
+			</div>
+			<div class="col-md-1">
+				<button type="button" class="btn btn-default" onclick="jsonCommand('s')">Stand</button>
+			</div>
+			<div class="col-md-1">
+			
+			</div>
+			<div class="col-md-1">
+			
+			</div>
+			<div class="col-md-1">
+			
+			</div>
+			<div class="col-md-1">
+			
+			</div>
+		</div>
+		<p>&nbsp;</p>
+		<div class="row">
+			<div class="col-md-1">
+				<div>Playername</div>
+				<div>Karten-Wert</div>
+				<div>Budget</div>
+					
+			</div>
+			<div class="col-md-2">
+				<img id="dc1-1" class="cardlevel1 img-responsive" src="/assets/images/KAROFUENF.png"/>
+			    <img id="dc1-2" class="cardlevel2 img-responsive" src="/assets/images/HERZFUENF.png"/>
+			    <img id="dc1-3" class="cardlevel3 img-responsive" src="/assets/images/HERZFUENF.png"/>
+			</div>
+			
+		</div>
+		
+		<div class="row">
+			<div class="col-md-1">
+				<div>Playername</div>
+				<div>Karten-Wert</div>
+				<div>Budget</div>				
+			</div>
+			<div class="col-md-2">
+				<img id="pc0-0" class="cardlevel1 img-responsive" src=""/>
+			    <img id="pc0-1" class="cardlevel2 img-responsive" src=""/>
+			    <img id="pc0-2" class="cardlevel3 img-responsive" src=""/>
+			    <img id="pc0-3" class="cardlevel4 img-responsive" src=""/>
+			    <img id="pc0-4" class="cardlevel5 img-responsive" src=""/>
+			    <img id="pc0-5" class="cardlevel6 img-responsive" src=""/>
+			</div>
+			<div class="col-md-1">
+				<div>Playername</div>
+				<div>Karten-Wert</div>
+				<div>Budget</div>
+					
+			</div>
+			<div class="col-md-2">
+				<img id="pc1-0" class="cardlevel1 img-responsive" src=""/>
+			    <img id="pc1-1" class="cardlevel2 img-responsive" src=""/>
+			    <img id="pc1-2" class="cardlevel3 img-responsive" src=""/>
+			    <img id="pc1-3" class="cardlevel4 img-responsive" src=""/>
+			    <img id="pc1-4" class="cardlevel5 img-responsive" src=""/>
+			    <img id="pc1-5" class="cardlevel6 img-responsive" src=""/>
+			</div>
+			<div class="col-md-1">
+				<div>Playername</div>
+				<div>Karten-Wert</div>
+				<div>Budget</div>
+					
+			</div>
+			<div class="col-md-2">
+				<img id="pc2-0" class="cardlevel1 img-responsive" src=""/>
+			    <img id="pc2-1" class="cardlevel2 img-responsive" src=""/>
+			    <img id="pc2-2" class="cardlevel3 img-responsive" src=""/>
+			    <img id="pc2-3" class="cardlevel4 img-responsive" src=""/>
+			    <img id="pc2-4" class="cardlevel5 img-responsive" src=""/>
+			    <img id="pc2-5" class="cardlevel6 img-responsive" src=""/>
+			</div>
+			<div class="col-md-1">
+				<div>Playername</div>
+				<div>Karten-Wert</div>
+				<div>Budget</div>
+					
+			</div>
+			<div class="col-md-2">
+				<img id="pc3-0" class="cardlevel1 img-responsive" src=""/>
+			    <img id="pc3-1" class="cardlevel2 img-responsive" src=""/>
+			    <img id="pc3-2" class="cardlevel3 img-responsive" src=""/>
+			    <img id="pc3-3" class="cardlevel4 img-responsive" src=""/>
+			    <img id="pc3-4" class="cardlevel5 img-responsive" src=""/>
+			    <img id="pc3-5" class="cardlevel6 img-responsive" src=""/>
+			</div>
+		</div>
+		
+		
 	
-		<div>
-			<button type="button" class="btn btn-default" onclick="getCards()">Get Cards</button>
-		</div>
-		
-		<div>
-			<button type="button" class="btn btn-default" onclick="jsonCommand('sb')">Set Bet</button>
-		</div>
-		
-		<div>
-			<button type="button" class="btn btn-default" onclick="jsonCommand('+')">Increase Bet</button>
-		</div>
-		
-		<div>
-			<button type="button" class="btn btn-default" onclick="jsonCommand('-')">Decrease Bet</button>
-		</div>
-		
-		<div>
-			<button type="button" class="btn btn-default" onclick="jsonCommand('h')">Hit</button>
-		</div>
-		
-		<div>
-			<button type="button" class="btn btn-default" onclick="jsonCommand('s')">Stand</button>
-		</div>
-		
-		<div id="loadImage-wrap">
-    		<img id="loadImage" src="/assets/images/HERZFUENF.png"/>
-		</div>
-		
-		@message
 		<p>&nbsp;</p>
 	</div>
     
