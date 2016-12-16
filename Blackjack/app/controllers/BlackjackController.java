@@ -41,7 +41,11 @@ public class BlackjackController extends Controller {
 		Blackjack.getInstance().getTUI().userinputselection(command);
 		return json();
 	}
-
+	
+	public Result addNewPlayer(String player) {
+		Blackjack.getInstance().getController().addnewPlayer(player);
+		return json();
+	}
 	
 	public Result json() {
 		List<Map> array = new ArrayList<Map>();
@@ -97,12 +101,6 @@ public class BlackjackController extends Controller {
 
 		String json = Json.stringify(Json.toJson(array));
 		return ok(json);
-	}
-	
-	public Result addNewPlayer(String playerName) {
-		controller.addnewPlayer(playerName); 
-		//todo:rückgabewert: wenn erfolgreich Spieler hinzugefügt worden ist?
-		return ok();
 	}
 	
 	public Result get() {

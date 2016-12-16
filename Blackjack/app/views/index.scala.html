@@ -41,7 +41,7 @@
 				$("#statusline").text(json[3].statusline);
 	      });
 		}
-	</script language="JavaScript">
+	</script>
 	<script>
 		window.onload = function() {
 			getCards();
@@ -55,8 +55,7 @@
 	    	var json = JSON.parse(data);
 	    	
     		// Player Cards
-          	var cards = json[1].cards;
-          	var players = cards.length;
+          	var players = json[0].players.length;
           	for (var i = 0; i < players; i++) {
 				var playerCards = cards[i];
 				var amountPlayerCards = playerCards.length;
@@ -80,6 +79,30 @@
 
 			$("#dealer-cardvalue").text(json[2].dealer[1][0]);
 			// Bet Anzeige
+
+			// statusline
+			$("#statusline").text(json[3].statusline);
+          	
+      });
+	}
+	</script>
+	
+	<script language="JavaScript">
+		function jsonNewPlayer() {
+		var name = $("#inputname").val();
+		$.post('/newPlayer/' + name,
+			function(data) {
+	    	var json = JSON.parse(data);
+	    	
+    		// Player Cards
+          	var players = json[0].players.length;
+          	
+			window.alert(players);
+         	// Player Name, Kartenwert, Budget
+			$("#playername-player" + players -1).text(json[0].players[0][players -1]);
+			$("#cardvalue-player" + players -1).text(json[0].players[1][players -1]);
+			$("#budget-player" + players -1).text(json[0].players[2][players -1]);
+          	
 
 			// statusline
 			$("#statusline").text(json[3].statusline);
@@ -305,6 +328,59 @@
 			</div>
 		</div>	
 		<p>&nbsp;</p>
+		
+		<!-- Button trigger modal -->
+		<button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModalHorizontal">
+		    Launch Horizontal Form
+		</button>
+		
+		<!-- Modal -->
+		<div class="modal fade" id="myModalHorizontal" tabindex="-1" role="dialog" 
+		     aria-labelledby="myModalLabel" aria-hidden="true">
+		    <div class="modal-dialog">
+		        <div class="modal-content">
+		            <!-- Modal Header -->
+		            <div class="modal-header">
+		                <button type="button" class="close" 
+		                   data-dismiss="modal">
+		                       <span aria-hidden="true">&times;</span>
+		                       <span class="sr-only">Close</span>
+		                </button>
+		                <h4 class="modal-title" id="myModalLabel">
+		                    Add new player
+		                </h4>
+		            </div>
+		            
+		            <!-- Modal Body -->
+		            <div class="modal-body">
+		                
+		                <form class="form-horizontal" role="form">
+		                  <div class="form-group">
+		                    <label  class="col-sm-2 control-label"
+		                              for="inputname">playername</label>
+		                    <div class="col-sm-10">
+		                        <input type="text" class="form-control" 
+		                        id="inputname"/>
+		                    </div>
+		                  </div>
+		                 
+		                 
+		                </form>                
+		            </div>
+		            
+		            <!-- Modal Footer -->
+		            <div class="modal-footer">
+		                <button type="button" class="btn btn-default"
+		                        data-dismiss="modal">
+		                            Cancel
+		                </button>
+		                <button type="button" class="btn btn-primary" onClick="jsonNewPlayer()" data-dismiss="modal">
+		                    Add Player
+		                </button>
+		            </div>
+		        </div>
+		    </div>
+		</div>
 	</div>
     
 		
