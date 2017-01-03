@@ -4,15 +4,19 @@
 
 <link rel="stylesheet" href='@routes.Assets.versioned("stylesheets/main.css")'/>
 
+	<script>
+		//window.onload = getCards();
+	</script>
+	
 	<script language="JavaScript">
 		function getCards() {
 		$.get('/json',
 	    	function(data) {
+		    	window.alert(data);
 		    	var json = JSON.parse(data);
-		    	
 	    		// Player Cards
 	          	var cards = json[1].cards;
-	          	var players = cards.length;
+	          	var players = json[0].players.length;
 	          	for (var i = 0; i < players; i++) {
 					var playerCards = cards[i];
 					var amountPlayerCards = playerCards.length;
@@ -23,8 +27,8 @@
 					
 	          		// Player Name, Kartenwert, Budget
 					$("#playername-player" + i).text(json[0].players[0][i]);
-					$("#cardvalue-player" + i).text(json[0].players[1][i]);
-					$("#budget-player" + i).text(json[0].players[2][i]);
+					$("#cardvalue-player" + i).text("Wert:   " + json[0].players[1][i]);
+					$("#budget-player" + i).text("Budget: " + json[0].players[2][i]);
 	          	}
 				
 				// Dealer Cards
@@ -39,76 +43,69 @@
 
 				// statusline
 				$("#statusline").text(json[3].statusline);
+				
 	      });
 		}
-	</script>
-	<script>
-		window.onload = function() {
-			getCards();
-		};
 	</script>
 	
 	<script language="JavaScript">
 		function jsonCommand(command) {
 		$.post('/json/' + command,
-				function(data) {
-	    	var json = JSON.parse(data);
-	    	
-    		// Player Cards
-          	var players = json[0].players.length;
-          	for (var i = 0; i < players; i++) {
-				var playerCards = cards[i];
-				var amountPlayerCards = playerCards.length;
-				for (var j = 0; j < amountPlayerCards; j++) {
-					var cardPath = "/assets/images/" + playerCards[j] + ".png";
-					$("#pc" + i + "-" + j).attr("src", cardPath);
-				}
+			function(data) {
+		    	window.alert(data);
+				var json = JSON.parse(data);
+	    		// Player Cards
+	          	var cards = json[1].cards;
+	          	var players = json[0].players.length;
+	          	for (var i = 0; i < players; i++) {
+					var playerCards = cards[i];
+					var amountPlayerCards = playerCards.length;
+					for (var j = 0; j < amountPlayerCards; j++) {
+						var cardPath = "/assets/images/" + playerCards[j] + ".png";
+						$("#pc" + i + "-" + j).attr("src", cardPath);
+					}
+					
+	          		// Spielername, Kartenwert, Budget
+					$("#playername-player" + i).text(json[0].players[0][i]);
+					$("#cardvalue-player" + i).text("Wert:   " + json[0].players[1][i]);
+					$("#budget-player" + i).text("Budget: " + json[0].players[2][i]);
+	          	}
 				
-          		// Player Name, Kartenwert, Budget
-				$("#playername-player" + i).text(json[0].players[0][i]);
-				$("#cardvalue-player" + i).text(json[0].players[1][i]);
-				$("#budget-player" + i).text(json[0].players[2][i]);
-          	}
-			
-			// Dealer Cards
-			var dealercards = json[2].dealer[0];
-			for (var i = 0; i < dealercards.length; i++) {
-				var cardPath = "/assets/images/" + dealercards[i] + ".png";
-				$("#dc" + i).attr("src", cardPath);
-			}
-
-			$("#dealer-cardvalue").text(json[2].dealer[1][0]);
-			// Bet Anzeige
-
-			// statusline
-			$("#statusline").text(json[3].statusline);
-          	
-      });
-	}
+				// Dealer Cards
+				var dealercards = json[2].dealer[0];
+				for (var i = 0; i < dealercards.length; i++) {
+					var cardPath = "/assets/images/" + dealercards[i] + ".png";
+					$("#dc" + i).attr("src", cardPath);
+				}
+	
+				$("#dealer-cardvalue").text(json[2].dealer[1][0]);
+	
+				// statusline
+				$("#statusline").text(json[3].statusline);
+				// Bet Anzeige TODO:
+      		});
+		}
 	</script>
 	
 	<script language="JavaScript">
 		function jsonNewPlayer() {
-		var name = $("#inputname").val();
-		$.post('/newPlayer/' + name,
-			function(data) {
-	    	var json = JSON.parse(data);
-	    	
-    		// Player Cards
-          	var players = json[0].players.length;
-          	
-			window.alert(players);
-         	// Player Name, Kartenwert, Budget
-			$("#playername-player" + players -1).text(json[0].players[0][players -1]);
-			$("#cardvalue-player" + players -1).text(json[0].players[1][players -1]);
-			$("#budget-player" + players -1).text(json[0].players[2][players -1]);
-          	
-
-			// statusline
-			$("#statusline").text(json[3].statusline);
-          	
-      });
-	}
+			var name = $("#inputname").val();
+			$.post('/newPlayer/' + name,
+				function(data) {
+		    	var json = JSON.parse(data);
+		    	
+	    		// Player Cards
+	          	var players = json[0].players.length;
+	          	
+	         	// Spielername, Kartenwert, Budget
+				$("#playername-player" + players -1).text(json[0].players[0][players -1]);
+				$("#cardvalue-player" + players -1).text("Wert:   " + json[0].players[1][players -1]);
+				$("#budget-player" + players -1).text("Budget: " + json[0].players[2][players -1]);
+	          	
+				// statusline
+				$("#statusline").text(json[3].statusline);
+      		});
+		}
 	</script>
 	
 	<div class="container">
@@ -138,7 +135,7 @@
 		      <li class="dropdown">
 		      <a href="#" class="dropdown-toggle" data-toggle="dropdown">Options <b class="caret"></b></a>
 		        <ul class="dropdown-menu">
-		          <li><a href="/newPlayer/Testobjekt">Add Player</a></li>
+		          <li><a href="" data-toggle="modal" data-target="#addNewPlayer" >Add Player</a></li>
 		        </ul>
 		      </li>
 		    </ul>
@@ -152,33 +149,13 @@
 			<div class="col-md-1">
 				<button type="button" class="btn btn-default" onclick="jsonCommand('s')">Stand</button>
 			</div>	
-			<div class="col-md-1">
-			</div>
-			<div class="col-md-1">
-			</div>
-			<div class="col-md-1">
-			</div>
-			<div class="col-md-1">
-			
-			</div>
-			<div class="col-md-1">
-			</div>
-			<div class="col-md-1">
-			</div>
-			<div class="col-md-1">
-			
-			</div>
-			<div class="col-md-1">
-			
-			</div>
+			<div class="col-md-8"></div>
 			<div class="col-md-1">
 				<button type="button" class="btn btn-default" onclick="jsonCommand('-')">- Bet</button>
 				<button type="button" class="btn btn-default" onclick="jsonCommand('+')">+ Bet</button>
 				<button type="button" class="btn btn-default" onclick="jsonCommand('sb')">Set Bet</button>	
 			</div>
-			<div class="col-md-1">
-			
-			</div>
+			<div class="col-md-1"></div>
 		</div>
 		<p>&nbsp;</p>
 		<div class="row">
@@ -196,7 +173,7 @@
 						Wert:
 					</div>
 					<div class="col-md-6">
-						<div id="dealer-cardvalue">placeholder(Karten-Wert)</div>
+						<div id="dealer-cardvalue"></div>
 					</div>
 				</div>		
 			</div>
@@ -210,26 +187,11 @@
 		</div>
 		<p>&nbsp;</p>
 		<div class="row">
-			<div class="col-md-1">		
-				<div id="playername-player0">placeholder(Playername)</div>
-
-				<div class="row">
-					<div class="col-md-6">
-						Wert:
-					</div>
-					<div class="col-md-6">
-						<div id="cardvalue-player0">placeholder(Karten-Wert)</div>
-					</div>
-				</div>
-
-				<div class="row">
-					<div class="col-md-6">
-						Budget:
-					</div>
-					<div class="col-md-6">
-						<div id="budget-player0">placeholder(Budget)</div>									
-					</div>
-				</div>
+			<div class="col-md-2">		
+				<div id="playername-player0"></div>
+				<div id="cardvalue-player0"></div>
+				<div id="budget-player0"></div>
+				<div id="wette-player0"></div>								
 			</div>
 			<div class="col-md-2">
 				<img id="pc0-0" class="cardlevel1 img-responsive" src=""/>
@@ -239,26 +201,11 @@
 			    <img id="pc0-4" class="cardlevel5 img-responsive" src=""/>
 			    <img id="pc0-5" class="cardlevel6 img-responsive" src=""/>
 			</div>
-			<div class="col-md-1">
-				<div id="playername-player1">placeholder(Playername)</div>
-
-				<div class="row">
-					<div class="col-md-6">
-						Wert:
-					</div>
-					<div class="col-md-6">
-						<div id="cardvalue-player1">placeholder(Karten-Wert)</div>
-					</div>
-				</div>
-
-				<div class="row">
-					<div class="col-md-6">
-						Budget:
-					</div>
-					<div class="col-md-6">
-						<div id="budget-player1">placeholder(Budget)</div>									
-					</div>
-				</div>		
+			<div class="col-md-2">		
+				<div id="playername-player1"></div>
+				<div id="cardvalue-player1"></div>
+				<div id="budget-player1"></div>
+				<div id="wette-player1"></div>										
 			</div>
 			<div class="col-md-2">
 				<img id="pc1-0" class="cardlevel1 img-responsive" src=""/>
@@ -268,26 +215,11 @@
 			    <img id="pc1-4" class="cardlevel5 img-responsive" src=""/>
 			    <img id="pc1-5" class="cardlevel6 img-responsive" src=""/>
 			</div>
-			<div class="col-md-1">
-				<div id="playername-player2">placeholder(Playername)</div>
-
-				<div class="row">
-					<div class="col-md-6">
-						Wert:
-					</div>
-					<div class="col-md-6">
-						<div id="cardvalue-player2">placeholder(Karten-Wert)</div>
-					</div>
-				</div>
-
-				<div class="row">
-					<div class="col-md-6">
-						Budget:
-					</div>
-					<div class="col-md-6">
-						<div id="budget-player2">placeholder(Budget)</div>									
-					</div>
-				</div>			
+			<div class="col-md-2">		
+				<div id="playername-player2"></div>
+				<div id="cardvalue-player2"></div>
+				<div id="budget-player2"></div>
+				<div id="wette-player2"></div>										
 			</div>
 			<div class="col-md-2">
 				<img id="pc2-0" class="cardlevel1 img-responsive" src=""/>
@@ -297,45 +229,12 @@
 			    <img id="pc2-4" class="cardlevel5 img-responsive" src=""/>
 			    <img id="pc2-5" class="cardlevel6 img-responsive" src=""/>
 			</div>
-			<div class="col-md-1">
-				<div id="playername-player3">placeholder(Playername)</div>
-
-				<div class="row">
-					<div class="col-md-6">
-						Wert:
-					</div>
-					<div class="col-md-6">
-						<div id="cardvalue-player3">placeholder(Karten-Wert)</div>
-					</div>
-				</div>
-
-				<div class="row">
-					<div class="col-md-6">
-						Budget:
-					</div>
-					<div class="col-md-6">
-						<div id="budget-player3">placeholder(Budget)</div>									
-					</div>
-				</div>	
-			</div>
-			<div class="col-md-2">
-				<img id="pc3-0" class="cardlevel1 img-responsive" src=""/>
-			    <img id="pc3-1" class="cardlevel2 img-responsive" src=""/>
-			    <img id="pc3-2" class="cardlevel3 img-responsive" src=""/>
-			    <img id="pc3-3" class="cardlevel4 img-responsive" src=""/>
-			    <img id="pc3-4" class="cardlevel5 img-responsive" src=""/>
-			    <img id="pc3-5" class="cardlevel6 img-responsive" src=""/>
-			</div>
-		</div>	
+		</div>
+			
 		<p>&nbsp;</p>
 		
-		<!-- Button trigger modal -->
-		<button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModalHorizontal">
-		    Launch Horizontal Form
-		</button>
-		
-		<!-- Modal -->
-		<div class="modal fade" id="myModalHorizontal" tabindex="-1" role="dialog" 
+		<!-- Add new Player -->
+		<div class="modal fade" id="addNewPlayer" tabindex="-1" role="dialog" 
 		     aria-labelledby="myModalLabel" aria-hidden="true">
 		    <div class="modal-dialog">
 		        <div class="modal-content">
@@ -363,8 +262,6 @@
 		                        id="inputname"/>
 		                    </div>
 		                  </div>
-		                 
-		                 
 		                </form>                
 		            </div>
 		            

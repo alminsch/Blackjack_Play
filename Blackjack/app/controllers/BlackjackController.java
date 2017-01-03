@@ -102,9 +102,4 @@ public class BlackjackController extends Controller {
 		String json = Json.stringify(Json.toJson(array));
 		return ok(json);
 	}
-	
-	public Result get() {
-	    Map<String, String[]> queryParameters = request().queryString();
-	    return ok(String.format("Here's my server-side data using $.get(), and you sent me [%s]", queryParameters.get("foo")[0]));
-	}
 }
