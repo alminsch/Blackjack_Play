@@ -20,9 +20,8 @@ public class BlackjackController extends Controller {
 	static IController controller = Blackjack.getInstance().getController();
 	
 	public Result blackjack(String command) {
- 		TextUI tui = Blackjack.getInstance().getTUI();
- 		tui.userinputselection(command);
-		return ok();
+		Blackjack.getInstance().getTUI().userinputselection(command);
+		return ok(index.render("Blackjack ready",controller));
 	}
 	
 	public Result start() {
@@ -34,7 +33,7 @@ public class BlackjackController extends Controller {
 	}
 
 	public Result index() {
-        return ok(index.render("Your new application is ready.",controller));
+        return ok(index.render("Blackjack ready",controller));
     }
 
 	public Result jsonCommand(String command) {

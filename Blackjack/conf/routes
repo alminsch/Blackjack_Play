@@ -4,10 +4,9 @@
 
 GET     /                           controllers.BlackjackController.start()
 
-
 GET		/blackjack/:command			controllers.BlackjackController.blackjack(command: String)
 
-GET		/bj							controllers.BlackjackController.index()
+GET		/blackjack					controllers.BlackjackController.index()
 
 GET     /rules                		controllers.BlackjackController.rules()
 

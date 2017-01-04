@@ -5,106 +5,55 @@
 <link rel="stylesheet" href='@routes.Assets.versioned("stylesheets/main.css")'/>
 
 	<script>
-		//window.onload = getCards();
-	</script>
-	
-	<script language="JavaScript">
-		function getCards() {
-		$.get('/json',
-	    	function(data) {
-		    	window.alert(data);
-		    	var json = JSON.parse(data);
-	    		// Player Cards
-	          	var cards = json[1].cards;
-	          	var players = json[0].players.length;
-	          	for (var i = 0; i < players; i++) {
-					var playerCards = cards[i];
-					var amountPlayerCards = playerCards.length;
-					for (var j = 0; j < amountPlayerCards; j++) {
-						var cardPath = "/assets/images/" + playerCards[j] + ".png";
-						$("#pc" + i + "-" + j).attr("src", cardPath);
-					}
-					
-	          		// Player Name, Kartenwert, Budget
-					$("#playername-player" + i).text(json[0].players[0][i]);
-					$("#cardvalue-player" + i).text("Wert:   " + json[0].players[1][i]);
-					$("#budget-player" + i).text("Budget: " + json[0].players[2][i]);
-	          	}
-				
-				// Dealer Cards
-				var dealercards = json[2].dealer[0];
-				for (var i = 0; i < dealercards.length; i++) {
-					var cardPath = "/assets/images/" + dealercards[i] + ".png";
-					$("#dc" + i).attr("src", cardPath);
-				}
-
-				$("#dealer-cardvalue").text(json[2].dealer[1][0]);
-				// Bet Anzeige
-
-				// statusline
-				$("#statusline").text(json[3].statusline);
-				
-	      });
-		}
+		window.onload = jsonCommand(h);
 	</script>
 	
 	<script language="JavaScript">
 		function jsonCommand(command) {
 		$.post('/json/' + command,
 			function(data) {
-		    	window.alert(data);
-				var json = JSON.parse(data);
-	    		// Player Cards
-	          	var cards = json[1].cards;
-	          	var players = json[0].players.length;
-	          	for (var i = 0; i < players; i++) {
-					var playerCards = cards[i];
-					var amountPlayerCards = playerCards.length;
-					for (var j = 0; j < amountPlayerCards; j++) {
-						var cardPath = "/assets/images/" + playerCards[j] + ".png";
-						$("#pc" + i + "-" + j).attr("src", cardPath);
-					}
-					
-	          		// Spielername, Kartenwert, Budget
-					$("#playername-player" + i).text(json[0].players[0][i]);
-					$("#cardvalue-player" + i).text("Wert:   " + json[0].players[1][i]);
-					$("#budget-player" + i).text("Budget: " + json[0].players[2][i]);
-	          	}
-				
-				// Dealer Cards
-				var dealercards = json[2].dealer[0];
-				for (var i = 0; i < dealercards.length; i++) {
-					var cardPath = "/assets/images/" + dealercards[i] + ".png";
-					$("#dc" + i).attr("src", cardPath);
-				}
-	
-				$("#dealer-cardvalue").text(json[2].dealer[1][0]);
-	
-				// statusline
-				$("#statusline").text(json[3].statusline);
-				// Bet Anzeige TODO:
+				processData(data);
       		});
 		}
-	</script>
-	
-	<script language="JavaScript">
+
 		function jsonNewPlayer() {
-			var name = $("#inputname").val();
 			$.post('/newPlayer/' + name,
 				function(data) {
-		    	var json = JSON.parse(data);
-		    	
-	    		// Player Cards
-	          	var players = json[0].players.length;
-	          	
-	         	// Spielername, Kartenwert, Budget
-				$("#playername-player" + players -1).text(json[0].players[0][players -1]);
-				$("#cardvalue-player" + players -1).text("Wert:   " + json[0].players[1][players -1]);
-				$("#budget-player" + players -1).text("Budget: " + json[0].players[2][players -1]);
-	          	
-				// statusline
-				$("#statusline").text(json[3].statusline);
+					processData(data);	
       		});
+		}
+
+		function processData(data) {
+			var json = JSON.parse(data);
+    		// Player Cards
+          	var cards = json[1].cards;
+          	var players = json[0].players.length;
+          	for (var i = 0; i < players; i++) {
+				var playerCards = cards[i];
+				var amountPlayerCards = playerCards.length;
+				for (var j = 0; j < amountPlayerCards; j++) {
+					var cardPath = "/assets/images/" + playerCards[j] + ".png";
+					$("#pc" + i + "-" + j).attr("src", cardPath);
+				}
+				
+          		// Spielername, Kartenwert, Budget
+				$("#playername-player" + i).text(json[0].players[0][i]);
+				$("#cardvalue-player" + i).text("Wert:   " + json[0].players[1][i]);
+				$("#budget-player" + i).text("Budget: " + json[0].players[2][i]);
+          	}
+			
+			// Dealer Cards
+			var dealercards = json[2].dealer[0];
+			for (var i = 0; i < dealercards.length; i++) {
+				var cardPath = "/assets/images/" + dealercards[i] + ".png";
+				$("#dc" + i).attr("src", cardPath);
+			}
+
+			$("#dealer-cardvalue").text(json[2].dealer[1][0]);
+
+			// statusline
+			$("#statusline").text(json[3].statusline);
+			// Bet Anzeige TODO:
 		}
 	</script>
 	
@@ -183,6 +132,7 @@
 			    <img id="dc2" class="cardlevel3 img-responsive" src=""/>
 			    <img id="dc3" class="cardlevel3 img-responsive" src=""/>
 			    <img id="dc4" class="cardlevel3 img-responsive" src=""/>
+			    <img id="dc5" class="cardlevel3 img-responsive" src=""/>
 			</div>		
 		</div>
 		<p>&nbsp;</p>
