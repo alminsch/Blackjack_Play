@@ -6,8 +6,16 @@
 
 	
 	<script language="JavaScript">
-		window.onload = jsonCommand('h'); // TODO: anstatt h etwas anderes
-	
+		window.onload = getCards();
+		
+		function getCards() {
+	 		$.get('/json',
+	 	    	function(data) {
+	 				processData(data);
+	 				alert(data);
+      		});
+		}
+	 	    	
 		function jsonCommand(command) {
 		$.post('/json/' + command,
 			function(data) {
@@ -16,29 +24,37 @@
 		}
 
 		function jsonNewPlayer() {
+			var name = $("#inputname").val();
 			$.post('/newPlayer/' + name,
 				function(data) {
+					window.alert(data);
 					processData(data);	
       		});
 		}
 
 		function processData(data) {
 			var json = JSON.parse(data);
+
+
     		// Player Cards
           	var cards = json[1].cards;
-          	var players = json[0].players.length;
+          	var players = json[0].players[0].length;
+          	
           	for (var i = 0; i < players; i++) {
-				var playerCards = cards[i];
-				var amountPlayerCards = playerCards.length;
-				for (var j = 0; j < amountPlayerCards; j++) {
-					var cardPath = "/assets/images/" + playerCards[j] + ".png";
-					$("#pc" + i + "-" + j).attr("src", cardPath);
-				}
-				
+              	if (cards.length > 0) {
+					var playerCards = cards[i];
+					var amountPlayerCards = playerCards.length;
+					for (var j = 0; j < amountPlayerCards; j++) {
+						var cardPath = "/assets/images/" + playerCards[j] + ".png";
+						$("#pc" + i + "-" + j).attr("src", cardPath);
+	
+					}
+              	}
           		// Spielername, Kartenwert, Budget
 				$("#playername-player" + i).text(json[0].players[0][i]);
 				$("#cardvalue-player" + i).text("Wert:   " + json[0].players[1][i]);
 				$("#budget-player" + i).text("Budget: " + json[0].players[2][i]);
+				// TODO: aktueller Wetteinsatz
           	}
 			
 			// Dealer Cards
@@ -47,15 +63,14 @@
 				var cardPath = "/assets/images/" + dealercards[i] + ".png";
 				$("#dc" + i).attr("src", cardPath);
 			}
-
+		
 			$("#dealer-cardvalue").text(json[2].dealer[1][0]);
 
-			// statusline
-			$("#statusline").text(json[3].statusline);
-			
 			// Bet Anzeige
 			$("#bet-field").text("Bet:    " + json[4].bet[0]);
 			$("#total-field").text("Total:  " + json[4].bet[1]);
+			// Status
+			$("#statusline").text(json[3].statusline);
 		}
 	</script>
 	
