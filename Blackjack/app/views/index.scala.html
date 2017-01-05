@@ -12,7 +12,6 @@
 	 		$.get('/json',
 	 	    	function(data) {
 	 				processData(data);
-	 				alert(data);
       		});
 		}
 	 	    	
@@ -27,7 +26,6 @@
 			var name = $("#inputname").val();
 			$.post('/newPlayer/' + name,
 				function(data) {
-					window.alert(data);
 					processData(data);	
       		});
 		}
