@@ -12,6 +12,8 @@ GET     /rules                		controllers.BlackjackController.rules()
 
 GET     /json                       controllers.BlackjackController.json()
 
+GET     /socket                     controllers.BlackjackController.createWebSocket()
+
 POST	/json/:command				controllers.BlackjackController.jsonCommand(command: String)
 
 POST	/newPlayer/:playername		controllers.BlackjackController.addNewPlayer(playername: String)

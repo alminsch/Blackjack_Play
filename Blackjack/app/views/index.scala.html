@@ -3,31 +3,64 @@
 @main("Welcome to Play") {
 
 <link rel="stylesheet" href='@routes.Assets.versioned("stylesheets/main.css")'/>
+<link rel="import" href="@routes.Assets.versioned("bower_components/elements/cards-display.html")">
+<link rel="import" href="@routes.Assets.versioned("bower_components/elements/player-display.html")">
+<link rel="import" href="@routes.Assets.versioned("bower_components/elements/bet-display.html")">
 
 	
 	<script language="JavaScript">
+
+	var uri = "ws://localhost:9000/socket";
+	var websocket;
+	var resetCards = false;
+	
 		window.onload = getCards();
 		
 		function getCards() {
-	 		$.get('/json',
-	 	    	function(data) {
-	 				processData(data);
-      		});
+			websocket = new WebSocket(uri);
+			websocket.onopen = function() { onOpen() }; 
+			websocket.onclose = function() { onClose() };
+			websocket.onmessage = function(evt) { onMessage(evt) };
+			$.get('/socket');
+			sendMessage("null");
+	 		//$.get('/json',
+	 	    	//function(data) {
+	 			//	processData(data);
+      		//});
 		}
 	 	    	
 		function jsonCommand(command) {
-		$.post('/json/' + command,
-			function(data) {
-				processData(data);
-      		});
+			sendMessage(command);
+		//$.post('/json/' + command,
+			//function(data) {
+			//	processData(data);
+      		//});
 		}
 
 		function jsonNewPlayer() {
 			var name = $("#inputname").val();
+			//sendMessage("newplayer:"+name);
 			$.post('/newPlayer/' + name,
 				function(data) {
 					processData(data);	
       		});
+		}
+
+		function onOpen() {
+			window.alert("CONNECTED");
+		}
+
+		function onClose() {
+			window.alert("DISCONNECTED");
+		}
+
+		function onMessage(evt) {
+			window.alert(evt.data);
+			processData(evt.data);
+		}
+
+		function sendMessage(message) {
+			websocket.send(message);
 		}
 
 		function processData(data) {
@@ -45,9 +78,20 @@
 					for (var j = 0; j < amountPlayerCards; j++) {
 						var cardPath = "/assets/images/" + playerCards[j] + ".png";
 						$("#pc" + i + "-" + j).attr("src", cardPath);
-	
+						resetCards = true;
 					}
               	}
+              	//if(cards.length == 0) {
+                  //	window.alert("ok no cards");
+                  	//if(resetCards == true) {
+                      //	window.alert("trying to reset cards");
+                        //for (var j = 0; j < 6; j++) {
+                      // 	$("#pc" + i + "-" j).attr("src","");
+                      //}
+                      //  window.alert("dont reset cards anymore");
+                       // resetCards = false;
+                   // }
+                //}
           		// Spielername, Kartenwert, Budget
 				$("#playername-player" + i).text(json[0].players[0][i]);
 				$("#cardvalue-player" + i).text("Wert:   " + json[0].players[1][i]);
@@ -72,47 +116,16 @@
 		}
 	</script>
 	
-	<div class="container">
-		<nav class="navbar navbar-default" role="navigation">
-		  <!-- Brand and toggle get grouped for better mobile display -->
-		  <div class="navbar-header">
-		    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-		      <span class="sr-only">Toggle navigation</span>
-		      <span class="icon-bar"></span>
-		      <span class="icon-bar"></span>
-		      <span class="icon-bar"></span>
-		    </button>
-		  </div>
-	
-		  <!-- Collect the nav links, forms, and other content for toggling -->
-		  <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-		    <ul class="nav navbar-nav">
-		      <li class="dropdown">
-		      <a href="#" class="dropdown-toggle" data-toggle="dropdown">File <b class="caret"></b></a>
-		        <ul class="dropdown-menu">
-		          <li><a href="" onclick="jsonCommand('n')">New Game</a></li>
-		          <li class="divider"></li>
-		          <li><a href="" onclick="jsonCommand('q')">Quit</a></li>
-		        </ul>
-		      </li>
-	
-		      <li class="dropdown">
-		      <a href="#" class="dropdown-toggle" data-toggle="dropdown">Options <b class="caret"></b></a>
-		        <ul class="dropdown-menu">
-		          <li><a href="" data-toggle="modal" data-target="#addNewPlayer" >Add Player</a></li>
-		        </ul>
-		      </li>
-		    </ul>
-		  </div><!-- /.navbar-collapse -->
-		</nav>
-		
 		<div class="row">
 			<div class="col-md-1">
 				<button type="button" class="btn btn-default" onclick="jsonCommand('h')">Hit</button>
 			</div>
 			<div class="col-md-1">
 				<button type="button" class="btn btn-default" onclick="jsonCommand('s')">Stand</button>
-			</div>	
+			</div>
+			<div class="col-md-1">
+				<button type="button" class="btn btn-default" onclick="jsonCommand('n')">New Game</button>
+			</div>
 			<div class="col-md-6"></div>
 			<div class="col-md-2">
 				<button type="button" class="btn btn-default btn-block "id="bet-field" disabled>Bet </button>
@@ -146,57 +159,30 @@
 				</div>		
 			</div>
 			<div class="col-md-2">
-				<img id="dc0" class="cardlevel1 img-responsive" src=""/>
-			    <img id="dc1" class="cardlevel2 img-responsive" src=""/>
-			    <img id="dc2" class="cardlevel3 img-responsive" src=""/>
-			    <img id="dc3" class="cardlevel3 img-responsive" src=""/>
-			    <img id="dc4" class="cardlevel3 img-responsive" src=""/>
-			    <img id="dc5" class="cardlevel3 img-responsive" src=""/>
+				<cards-display playeridx="dc"></cards-display>
 			</div>		
 		</div>
 		<p>&nbsp;</p>
 		<div class="row">
 			<div class="col-md-2">		
-				<div id="playername-player0"></div>
-				<div id="cardvalue-player0"></div>
-				<div id="budget-player0"></div>
-				<div id="wette-player0"></div>								
+				<player-display playeridx="0"></player-display>							
 			</div>
 			<div class="col-md-2">
-				<img id="pc0-0" class="cardlevel1 img-responsive" src=""/>
-			    <img id="pc0-1" class="cardlevel2 img-responsive" src=""/>
-			    <img id="pc0-2" class="cardlevel3 img-responsive" src=""/>
-			    <img id="pc0-3" class="cardlevel4 img-responsive" src=""/>
-			    <img id="pc0-4" class="cardlevel5 img-responsive" src=""/>
-			    <img id="pc0-5" class="cardlevel6 img-responsive" src=""/>
+				<cards-display playeridx="pc0-"></cards-display>
 			</div>
+			
 			<div class="col-md-2">		
-				<div id="playername-player1"></div>
-				<div id="cardvalue-player1"></div>
-				<div id="budget-player1"></div>
-				<div id="wette-player1"></div>										
+				<player-display playeridx="1"></player-display>							
 			</div>
 			<div class="col-md-2">
-				<img id="pc1-0" class="cardlevel1 img-responsive" src=""/>
-			    <img id="pc1-1" class="cardlevel2 img-responsive" src=""/>
-			    <img id="pc1-2" class="cardlevel3 img-responsive" src=""/>
-			    <img id="pc1-3" class="cardlevel4 img-responsive" src=""/>
-			    <img id="pc1-4" class="cardlevel5 img-responsive" src=""/>
-			    <img id="pc1-5" class="cardlevel6 img-responsive" src=""/>
+				<cards-display playeridx="pc1-"></cards-display>
 			</div>
+			
 			<div class="col-md-2">		
-				<div id="playername-player2"></div>
-				<div id="cardvalue-player2"></div>
-				<div id="budget-player2"></div>
-				<div id="wette-player2"></div>										
+				<player-display playeridx="2"></player-display>							
 			</div>
 			<div class="col-md-2">
-				<img id="pc2-0" class="cardlevel1 img-responsive" src=""/>
-			    <img id="pc2-1" class="cardlevel2 img-responsive" src=""/>
-			    <img id="pc2-2" class="cardlevel3 img-responsive" src=""/>
-			    <img id="pc2-3" class="cardlevel4 img-responsive" src=""/>
-			    <img id="pc2-4" class="cardlevel5 img-responsive" src=""/>
-			    <img id="pc2-5" class="cardlevel6 img-responsive" src=""/>
+				<cards-display playeridx="pc2-"></cards-display>
 			</div>
 		</div>
 			
