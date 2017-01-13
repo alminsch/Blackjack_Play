@@ -115,18 +115,22 @@
 			$("#statusline").text(json[3].statusline);
 		}
 	</script>
-	
+	<div class="container">
 		<div class="row">
+			<div class="col-md-1">
+				<button type="button" class="btn btn-default" onclick="jsonCommand('n')">New Game</button>
+			</div>
+			<div class="col-md-1">
+				<button type="button" class="btn btn-default href="" data-toggle="modal" data-target="#addNewPlayer"">Add Player</button>
+			</div>
+			<div class="col-md-3"></div>
 			<div class="col-md-1">
 				<button type="button" class="btn btn-default" onclick="jsonCommand('h')">Hit</button>
 			</div>
 			<div class="col-md-1">
 				<button type="button" class="btn btn-default" onclick="jsonCommand('s')">Stand</button>
 			</div>
-			<div class="col-md-1">
-				<button type="button" class="btn btn-default" onclick="jsonCommand('n')">New Game</button>
-			</div>
-			<div class="col-md-6"></div>
+			<div class="col-md-2"></div>
 			<div class="col-md-2">
 				<button type="button" class="btn btn-default btn-block "id="bet-field" disabled>Bet </button>
 				<button type="button" class="btn btn-default btn-block" id="total-field" disabled>Total</button>
@@ -136,7 +140,6 @@
 				<button type="button" class="btn btn-default btn-block" onclick="jsonCommand('+')">+ Bet</button>
 				<button type="button" class="btn btn-default btn-block" onclick="jsonCommand('sb')">Set Bet</button>	
 			</div>
-			<div class="col-md-1"></div>
 		</div>
 		<p>&nbsp;</p>
 		<div class="row">
@@ -185,7 +188,7 @@
 				<cards-display playeridx="pc2-"></cards-display>
 			</div>
 		</div>
-			
+	</div>	
 		<p>&nbsp;</p>
 		
 		<!-- Add new Player -->
