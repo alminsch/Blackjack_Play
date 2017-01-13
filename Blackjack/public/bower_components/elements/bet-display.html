@@ -1,0 +1,23 @@
+<link rel="import" href='../polymer/polymer.html'>
+<link rel="import" href="../paper-button/paper-button.html">
+<link rel="import" href="../iron-icons/iron-icons.html">
+
+<dom-module id="bet-display">
+	<template>
+  		<paper-button raised on-tap="jsonrequest"><iron-icon icon="add"></iron-icon>Bet</paper-button>
+		<paper-button raised on-tap="jsonrequest"><iron-icon icon="delete"></iron-icon>Bet</paper-button>
+		<paper-button raised on-tap="jsonrequest"><iron-icon icon="check"></iron-icon>Set Bet</paper-button>
+  	</template>
+
+	<script>
+		Polymer({
+	      is: 'bet-display',
+	        
+	      jsonrequest: function() {
+	    	  var y = document.getElementById("myscript");
+	    	  y.lala();
+	        },
+	    });
+		
+	</script>
+</dom-module>

@@ -13,9 +13,7 @@
         <title>@title</title>
         <link rel="stylesheet" media="screen" href="@routes.Assets.versioned("stylesheets/main.css")">
         <link rel="shortcut icon" type="image/png" href="@routes.Assets.versioned("images/favicon.png")">
-        
-        
-        <script src="@routes.Assets.versioned("javascripts/hello.js")" type="text/javascript"></script>
+        <link rel="import" href="@routes.Assets.versioned("polymer-style/polymer-style.html")">
         
         <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
     	<script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
@@ -26,9 +24,16 @@
    		<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css">
     	<!-- Latest compiled and minified JavaScript -->
     	<script src="//netdna.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    	
+    	<script src="@routes.Assets.versioned("bower_components/webcomponentsjs/webcomponents-lite.js")" type="text/javascript"></script>
+        <link rel="import" href="@routes.Assets.versioned("bower_components/polymer/polymer.html")">
+        
+        
+        
     </head>
     <body id="backGround">
     	<p>&nbsp;</p>
+    	
 	  	<div class="container">
 	  	
 	      <!-- Static navbar -->
@@ -57,7 +62,6 @@
 	      </nav>
 	    </div> <!-- /container -->
 
-   		
        	@content
 
    @*		

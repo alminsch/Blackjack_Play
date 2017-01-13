@@ -1,0 +1,19 @@
+<link rel="import" href='../polymer/polymer.html'>
+
+<dom-module id="player-display">
+	<template>
+		<div id="playername-player[[playeridx]]"></div>
+		<div id="cardvalue-player[[playeridx]]"></div>
+		<div id="budget-player[[playeridx]]"></div>
+		<div id="wette-player[[playeridx]]"></div>	
+  	</template>
+
+	<script>
+		Polymer({
+	      is: 'player-display',
+	      properties: {
+	    	  playeridx: String
+	      }
+	    });
+	</script>
+</dom-module>
