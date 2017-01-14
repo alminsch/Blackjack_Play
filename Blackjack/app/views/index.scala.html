@@ -12,7 +12,7 @@
 
 	var uri = "ws://localhost:9000/socket";
 	var websocket;
-	var resetCards = false;
+	var resetCards = 0;
 	
 		window.onload = getCards();
 		
@@ -55,7 +55,6 @@
 		}
 
 		function onMessage(evt) {
-			window.alert(evt.data);
 			processData(evt.data);
 		}
 
@@ -78,20 +77,15 @@
 					for (var j = 0; j < amountPlayerCards; j++) {
 						var cardPath = "/assets/images/" + playerCards[j] + ".png";
 						$("#pc" + i + "-" + j).attr("src", cardPath);
-						resetCards = true;
+						resetCards = amountPlayerCards;
 					}
+					if (amountPlayerCards == 0 && resetCards > 0) {
+						for (var x = 0; x < resetCards; x++) {
+						//	$("#pc" + i + "-" x).attr("src","");
+						}
+						resetCards = 0;
+					}					
               	}
-              	//if(cards.length == 0) {
-                  //	window.alert("ok no cards");
-                  	//if(resetCards == true) {
-                      //	window.alert("trying to reset cards");
-                        //for (var j = 0; j < 6; j++) {
-                      // 	$("#pc" + i + "-" j).attr("src","");
-                      //}
-                      //  window.alert("dont reset cards anymore");
-                       // resetCards = false;
-                   // }
-                //}
           		// Spielername, Kartenwert, Budget
 				$("#playername-player" + i).text(json[0].players[0][i]);
 				$("#cardvalue-player" + i).text("Wert:   " + json[0].players[1][i]);
