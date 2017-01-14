@@ -53,125 +53,14 @@ public class BlackjackController extends Controller {
 	}
 	
 	public Result json() {
-		List<Map> array = new ArrayList<Map>();
-
-		Map<String, Object> players = new HashMap<String, Object>();
-		Map<String, Object> cards = new HashMap<String, Object>();
-		Map<String, Object> dealer = new HashMap<String, Object>();
-		Map<String, Object> statusLine = new HashMap<String, Object>();
-		Map<String, Object> betDisplay = new HashMap<String, Object>();
-		
-
-		List<List> playerlist = new ArrayList<List>();
-		List<String> playerName = new ArrayList<String>();
-		List<String> cardValue = new ArrayList<String>();
-		List<String> budget = new ArrayList<String>();
-		
-		List<List> cardArray = new ArrayList<List>();
-		List<List> dealerlist = new ArrayList<List>();
-	
-		for(Player p : controller.getPlayerList()) {
-			playerName.add(p.getPlayerName());
-			cardValue.add(p.getHandValue()[0] + "/" + p.getHandValue()[1]);
-			budget.add(Integer.toString(p.getbudget()));
-			
-			cardArray.add(p.getCardsInHand());
-		}
-		
-		// player
-		playerlist.add(playerName);
-		playerlist.add(cardValue);
-		playerlist.add(budget);
-		players.put("players", playerlist);
-		
-		// cards
-		cards.put("cards", cardArray);
-		
-		// dealer
-		dealerlist.add(controller.getDealerCards());
-		dealerlist.add(Arrays.asList(controller.getDealer().getHandValue()[0] + "/" + controller.getDealer().getHandValue()[1]));
-		dealer.put("dealer", dealerlist);
-		
-		// statusLine
-		statusLine.put("statusline", controller.getStatus());
-		
-		// Bet
-		betDisplay.put("bet", Arrays.asList(controller.getDisplayBet(), controller.getTotalPlayerBet()));
-		
-		array.add(players);
-		array.add(cards);
-		array.add(dealer);
-		array.add(statusLine);
-		array.add(betDisplay);
-
-		String json = Json.stringify(Json.toJson(array));
-		
-		return ok(json);
+		return ok(controller.json());
 	}
 	
 	public static String getJson(String command) {
 		if(!command.equals("null")) {
 			Blackjack.getInstance().getTUI().userinputselection(command);
 		}
-		//if(command.contains("newplayer:")) {
-			//String player = command.split(":")[1];
-			//Blackjack.getInstance().getController().addnewPlayer(player);
-		//}
-		
-		List<Map> array = new ArrayList<Map>();
-
-		Map<String, Object> players = new HashMap<String, Object>();
-		Map<String, Object> cards = new HashMap<String, Object>();
-		Map<String, Object> dealer = new HashMap<String, Object>();
-		Map<String, Object> statusLine = new HashMap<String, Object>();
-		Map<String, Object> betDisplay = new HashMap<String, Object>();
-		
-
-		List<List> playerlist = new ArrayList<List>();
-		List<String> playerName = new ArrayList<String>();
-		List<String> cardValue = new ArrayList<String>();
-		List<String> budget = new ArrayList<String>();
-		
-		List<List> cardArray = new ArrayList<List>();
-		List<List> dealerlist = new ArrayList<List>();
-	
-		for(Player p : controller.getPlayerList()) {
-			playerName.add(p.getPlayerName());
-			cardValue.add(p.getHandValue()[0] + "/" + p.getHandValue()[1]);
-			budget.add(Integer.toString(p.getbudget()));
-			
-			cardArray.add(p.getCardsInHand());
-		}
-		
-		// player
-		playerlist.add(playerName);
-		playerlist.add(cardValue);
-		playerlist.add(budget);
-		players.put("players", playerlist);
-		
-		// cards
-		cards.put("cards", cardArray);
-		
-		// dealer
-		dealerlist.add(controller.getDealerCards());
-		dealerlist.add(Arrays.asList(controller.getDealer().getHandValue()[0] + "/" + controller.getDealer().getHandValue()[1]));
-		dealer.put("dealer", dealerlist);
-		
-		// statusLine
-		statusLine.put("statusline", controller.getStatus());
-		
-		// Bet
-		betDisplay.put("bet", Arrays.asList(controller.getDisplayBet(), controller.getTotalPlayerBet()));
-		
-		array.add(players);
-		array.add(cards);
-		array.add(dealer);
-		array.add(statusLine);
-		array.add(betDisplay);
-
-		String json = Json.stringify(Json.toJson(array));
-		
-		return json;
+		return controller.json();
 	}
 	
 	public LegacyWebSocket<String> createWebSocket() {
