@@ -20,7 +20,6 @@ import play.mvc.WebSocket;
 import views.html.*;
 import play.Logger;
 
-
 public class BlackjackController extends Controller {
 	
 	static IController controller = Blackjack.getInstance().getController();
