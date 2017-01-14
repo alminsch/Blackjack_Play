@@ -87,9 +87,10 @@
 					}					
               	}
           		// Spielername, Kartenwert, Budget
-				$("#playername-player" + i).text(json[0].players[0][i]);
+				$("#playername-player" + i).text("Spieler " + (i + 1) + ": " + json[0].players[0][i]);
 				$("#cardvalue-player" + i).text("Wert:   " + json[0].players[1][i]);
 				$("#budget-player" + i).text("Budget: " + json[0].players[2][i]);
+				$("#bet-player" + i).text("Wetteinsatz: " + json[0].players[3][i]);
 				// TODO: aktueller Wetteinsatz
           	}
 			
@@ -149,14 +150,15 @@
 		
 		<p>&nbsp;</p>
 		<div class="row">
-			<div class="col-md-1">
-				<div >Dealer</div>
+			<div class="col-md-4"></div>
+			<div class="col-md-2">
+				<div class="display-name-font">Dealer</div>
 				<div class="row">
-					<div class="col-md-6">
+					<div class="col-md-6 display-font">
 						Wert:
 					</div>
 					<div class="col-md-6">
-						<div id="dealer-cardvalue"></div>
+						<div class="display-font" id="dealer-cardvalue"></div>
 					</div>
 				</div>		
 			</div>
