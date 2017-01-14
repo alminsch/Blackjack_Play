@@ -12,8 +12,8 @@
 
 	var uri = "ws://localhost:9000/socket";
 	var websocket;
-	var resetCards = 0;
-	
+	var maxAmountCards = 6;
+
 		window.onload = getCards();
 		
 		function getCards() {
@@ -22,7 +22,6 @@
 			websocket.onclose = function() { onClose() };
 			websocket.onmessage = function(evt) { onMessage(evt) };
 			$.get('/socket');
-			sendMessage("null");
 	 		//$.get('/json',
 	 	    	//function(data) {
 	 			//	processData(data);
@@ -47,11 +46,12 @@
 		}
 
 		function onOpen() {
-			window.alert("CONNECTED");
+			//window.alert("CONNECTED");
+			jsonCommand("null");
 		}
 
 		function onClose() {
-			window.alert("DISCONNECTED");
+			//window.alert("DISCONNECTED");
 		}
 
 		function onMessage(evt) {
@@ -77,11 +77,11 @@
 					for (var j = 0; j < amountPlayerCards; j++) {
 						var cardPath = "/assets/images/" + playerCards[j] + ".png";
 						$("#pc" + i + "-" + j).attr("src", cardPath);
-						resetCards = amountPlayerCards;
 					}
-					if (amountPlayerCards == 0 && resetCards > 0) {
-						for (var x = 0; x < resetCards; x++) {
-						//	$("#pc" + i + "-" x).attr("src","");
+					// reset playercards
+					if (json[3].statusline[1] === "DURING_BET") {
+						for (var x = 0; x < maxAmountCards; x++) {
+							$("#pc" + i + "-" + x).attr("src","");
 						}
 						resetCards = 0;
 					}					
@@ -99,6 +99,12 @@
 				var cardPath = "/assets/images/" + dealercards[i] + ".png";
 				$("#dc" + i).attr("src", cardPath);
 			}
+			// reset dealercards
+			if (json[3].statusline[1] === "DURING_BET") {
+				for (var i = 0; i < maxAmountCards; i++) {
+					$("#dc" + i).attr("src", "");
+				}
+			}
 		
 			$("#dealer-cardvalue").text(json[2].dealer[1][0]);
 
@@ -106,7 +112,7 @@
 			$("#bet-field").text("Bet:    " + json[4].bet[0]);
 			$("#total-field").text("Total:  " + json[4].bet[1]);
 			// Status
-			$("#statusline").text(json[3].statusline);
+			$("#statusline").text(json[3].statusline[0]);
 		}
 	</script>
 	<div class="container">
@@ -138,8 +144,7 @@
 		<p>&nbsp;</p>
 		<div class="row">
 			<div class="col-md-12">
-				<div id="statusline">placeholder(statusline)
-			</div>
+				<div id="statusline"></div>
 		</div>
 		
 		<p>&nbsp;</p>
