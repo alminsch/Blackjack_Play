@@ -12,8 +12,8 @@
 
 	var uri = "ws://localhost:9000/socket";
 	var websocket;
-	var resetCards = false;
-	
+	var maxAmountCards = 6;
+
 		window.onload = getCards();
 		
 		function getCards() {
@@ -22,7 +22,6 @@
 			websocket.onclose = function() { onClose() };
 			websocket.onmessage = function(evt) { onMessage(evt) };
 			$.get('/socket');
-			sendMessage("null");
 	 		//$.get('/json',
 	 	    	//function(data) {
 	 			//	processData(data);
@@ -47,15 +46,15 @@
 		}
 
 		function onOpen() {
-			window.alert("CONNECTED");
+			//window.alert("CONNECTED");
+			jsonCommand("null");
 		}
 
 		function onClose() {
-			window.alert("DISCONNECTED");
+			//window.alert("DISCONNECTED");
 		}
 
 		function onMessage(evt) {
-			window.alert(evt.data);
 			processData(evt.data);
 		}
 
@@ -78,24 +77,20 @@
 					for (var j = 0; j < amountPlayerCards; j++) {
 						var cardPath = "/assets/images/" + playerCards[j] + ".png";
 						$("#pc" + i + "-" + j).attr("src", cardPath);
-						resetCards = true;
 					}
+					// reset playercards
+					if (json[3].statusline[1] === "DURING_BET") {
+						for (var x = 0; x < maxAmountCards; x++) {
+							$("#pc" + i + "-" + x).attr("src","");
+						}
+						resetCards = 0;
+					}					
               	}
-              	//if(cards.length == 0) {
-                  //	window.alert("ok no cards");
-                  	//if(resetCards == true) {
-                      //	window.alert("trying to reset cards");
-                        //for (var j = 0; j < 6; j++) {
-                      // 	$("#pc" + i + "-" j).attr("src","");
-                      //}
-                      //  window.alert("dont reset cards anymore");
-                       // resetCards = false;
-                   // }
-                //}
           		// Spielername, Kartenwert, Budget
-				$("#playername-player" + i).text(json[0].players[0][i]);
+				$("#playername-player" + i).text("Spieler " + (i + 1) + ": " + json[0].players[0][i]);
 				$("#cardvalue-player" + i).text("Wert:   " + json[0].players[1][i]);
 				$("#budget-player" + i).text("Budget: " + json[0].players[2][i]);
+				$("#bet-player" + i).text("Wetteinsatz: " + json[0].players[3][i]);
 				// TODO: aktueller Wetteinsatz
           	}
 			
@@ -105,6 +100,12 @@
 				var cardPath = "/assets/images/" + dealercards[i] + ".png";
 				$("#dc" + i).attr("src", cardPath);
 			}
+			// reset dealercards
+			if (json[3].statusline[1] === "DURING_BET") {
+				for (var i = 0; i < maxAmountCards; i++) {
+					$("#dc" + i).attr("src", "");
+				}
+			}
 		
 			$("#dealer-cardvalue").text(json[2].dealer[1][0]);
 
@@ -112,7 +113,7 @@
 			$("#bet-field").text("Bet:    " + json[4].bet[0]);
 			$("#total-field").text("Total:  " + json[4].bet[1]);
 			// Status
-			$("#statusline").text(json[3].statusline);
+			$("#statusline").text(json[3].statusline[0]);
 		}
 	</script>
 	<div class="container">
@@ -144,20 +145,20 @@
 		<p>&nbsp;</p>
 		<div class="row">
 			<div class="col-md-12">
-				<div id="statusline">placeholder(statusline)
-			</div>
+				<div id="statusline"></div>
 		</div>
 		
 		<p>&nbsp;</p>
 		<div class="row">
-			<div class="col-md-1">
-				<div >Dealer</div>
+			<div class="col-md-4"></div>
+			<div class="col-md-2">
+				<div class="display-name-font">Dealer</div>
 				<div class="row">
-					<div class="col-md-6">
+					<div class="col-md-6 display-font">
 						Wert:
 					</div>
 					<div class="col-md-6">
-						<div id="dealer-cardvalue"></div>
+						<div class="display-font" id="dealer-cardvalue"></div>
 					</div>
 				</div>		
 			</div>

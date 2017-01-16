@@ -30,6 +30,7 @@
         
         
         
+        
     </head>
     <body id="backGround">
     	<p>&nbsp;</p>
@@ -55,7 +56,8 @@
 
 	            </ul>
 	            <ul class="nav navbar-nav navbar-right">
-	              <li><a href="#">Kontakt</a></li>
+	              <li>
+	              <a href="" data-toggle="modal" data-target="#contactModel" >Kontakt</a></li>
 	            </ul>
 	          </div><!--/.nav-collapse -->
 	        </div><!--/.container-fluid -->
@@ -64,17 +66,29 @@
 
        	@content
 
-   @*		
-	<footer class="text-muted">
-      <div class="container">
-        <p class="float-xs-right">
-          <a href="#">Back to top</a>
-        </p>
-        <p>Album example is &copy; Bootstrap, but please download and customize it for yourself!</p>
-        <p>New to Bootstrap? <a href="../../">Visit the homepage</a> or read our <a href="../../getting-started/">getting started guide</a>.</p>
-      </div>
-    </footer>
-    *@
-
     </body>
+    <!-- Modal -->
+	<div id="contactModel" class="modal fade" role="dialog">
+	  <div class="modal-dialog">
+	
+	    <!-- Modal content-->
+	    <div class="modal-content">
+	      <div class="modal-header">
+	        <button type="button" class="close" data-dismiss="modal">&times;</button>
+	        <h4 class="modal-title">Kontakt</h4>
+	      </div>
+	      <div class="modal-body">
+	        <p>Alexander Minsch</p>
+	        <p>Email: a.minsch@@web.de</p>
+	        <p>&nbsp;</p>
+	        <p>Benjamin Herrmann</p>
+	        <p>Email: bsbenny.bh@@gmail.com</p>
+	      </div>
+	      <div class="modal-footer">
+	        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+	      </div>
+	    </div>
+	
+	  </div>
+	</div>
 </html>
