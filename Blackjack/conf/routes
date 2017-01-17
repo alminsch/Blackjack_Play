@@ -2,21 +2,28 @@
 # This file defines all application routes (Higher priority routes first)
 # ~~~~
 
-GET     /                           controllers.BlackjackController.start()
 
+# Implementation using Play
+GET		/							controllers.BlackjackController.blackjackindex()
+GET     /start                      controllers.BlackjackController.start()
 GET		/blackjack/:command			controllers.BlackjackController.blackjack(command: String)
-
-GET		/blackjack					controllers.BlackjackController.index()
-
+GET		/blackjack					controllers.BlackjackController.index(command: String="")
 GET     /rules                		controllers.BlackjackController.rules()
 
-GET     /json                       controllers.BlackjackController.json()
-
+POST	/newPlayer/:playername		controllers.BlackjackController.addNewPlayer(playername: String)
 GET     /socket                     controllers.BlackjackController.createWebSocket()
-
+GET     /json                       controllers.BlackjackController.json(command: String="")
 POST	/json/:command				controllers.BlackjackController.jsonCommand(command: String)
 
-POST	/newPlayer/:playername		controllers.BlackjackController.addNewPlayer(playername: String)
+# Implememtation using Angular.js
+GET     /blackjack.html                controllers.Assets.at(path="/public/html", file="blackjack.html")
+GET     /blackjack_ng.js     			controllers.Assets.at(path="/public/javascripts", file="blackjack_ng.js")
+GET     /blackjack.css                 controllers.Assets.at(path="/public/stylesheets", file="blackjack.css")
+GET		/sudoku9.json	            controllers.Assets.at(path="/public/data", file="sudoku9.json")
 
 # Map static resources from the /public folder to the /assets URL path
 GET     /assets/*file               controllers.Assets.versioned(path="/public", file: Asset)
+
+GET     /javascripts/*file          controllers.Assets.at(path="/public/javascripts", file)
+GET     /images/*file               controllers.Assets.at(path="/public/images", file)
+GET     /html/*file                 controllers.Assets.at(path="/public/html", file)

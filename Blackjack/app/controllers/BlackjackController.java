@@ -24,6 +24,10 @@ public class BlackjackController extends Controller {
 	
 	static IController controller = Blackjack.getInstance().getController();
 	
+	public Result blackjackindex() {
+		return ok(blackjackindex.render("Welcome to Blackjack"));
+	}
+	
 	public Result blackjack(String command) {
 		Blackjack.getInstance().getTUI().userinputselection(command);
 		return ok(index.render("Blackjack ready",controller));
@@ -37,21 +41,21 @@ public class BlackjackController extends Controller {
 		return ok(rules.render("Spielregeln"));
 	}
 
-	public Result index() {
+	public Result index(String command) {
         return ok(index.render("Blackjack ready",controller));
     }
 
 	public Result jsonCommand(String command) {
 		Blackjack.getInstance().getTUI().userinputselection(command);
-		return json();
+		return json("");
 	}
 	
 	public Result addNewPlayer(String player) {
 		Blackjack.getInstance().getController().addnewPlayer(player);
-		return json();
+		return json("");
 	}
 	
-	public Result json() {
+	public Result json(String command) {
 		return ok(controller.json());
 	}
 	

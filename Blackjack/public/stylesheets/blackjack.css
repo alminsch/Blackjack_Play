@@ -9,6 +9,7 @@
     bottom: 0;
 }
 
+
 .float-xs-right {
     float: right !important;
 }
@@ -94,6 +95,7 @@
 	font-size: 1.4em;
 	color: black;
 }
+	
 
 #statusline {
 	text-align: center;
