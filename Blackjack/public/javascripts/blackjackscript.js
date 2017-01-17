@@ -28,7 +28,6 @@ function jsonNewPlayer() {
 
 
 function processData(data) {
-	alert("da");
 	var json = JSON.parse(data);
 	// Player Cards
   	var cards = json[1].cards;
