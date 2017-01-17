@@ -65,9 +65,4 @@ public class BlackjackController extends Controller {
 		}
 		return controller.json();
 	}
-	
-	public LegacyWebSocket<String> createWebSocket() {
-		Logger.info("creating websocket with actor");
-		return WebSocket.withActor(WebSocketActor::props);
-	}
 }

@@ -19,6 +19,7 @@
         <script src="http://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.8/angular.min.js"></script>
 		<script src="http:////ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-sanitize.js"></script>
         <script type="text/javascript" src="/blackjack_ng.js"></script>
+        <script type="text/javascript" src="../javascripts/blackjackscript.js"></script>
         
     </head>
     <body ng-controller="blackjackController" id="backGround">
@@ -82,6 +83,11 @@
 		</div>
 		
 		<blackjack-table></blackjack-table>
+
+		<div ng-app='blackjackApp'>
+			<div ng-controller='blackjackController' ng-init='load()'></div>
+		</div>
+			
 		
 		<!-- Add new Player -->
 		<div class="modal fade" id="addNewPlayer" tabindex="-1" role="dialog" 
@@ -128,5 +134,5 @@
 		        </div>
 		    </div>
 		</div>	
-    </body>    
+    </body>
 </html>

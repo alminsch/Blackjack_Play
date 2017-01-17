@@ -5,55 +5,31 @@ var maxAmountCards = 6;
 window.onload = getCards();
 
 function getCards() {
-	websocket = new WebSocket(uri);
-	websocket.onopen = function() { onOpen() }; 
-	websocket.onclose = function() { onClose() };
-	websocket.onmessage = function(evt) { onMessage(evt) };
-	$.get('/socket');
-//$.get('/json',
-	//function(data) {
-	//	processData(data);
-//});
+$.get('/json',
+	function(data) {
+		processData(data);
+});
 }
     	
 function jsonCommand(command) {
-	sendMessage(command);
-//$.post('/json/' + command,
-	//function(data) {
-	//	processData(data);
-	//});
+$.post('/json/' + command,
+	function(data) {
+		processData(data);
+	});
 }
 
 function jsonNewPlayer() {
 	var name = $("#inputname").val();
-	//sendMessage("newplayer:"+name);
 	$.post('/newPlayer/' + name,
 		function(data) {
 			processData(data);	
 	});
 }
 
-function onOpen() {
-	//window.alert("CONNECTED");
-	jsonCommand("null");
-}
-
-function onClose() {
-	//window.alert("DISCONNECTED");
-}
-
-function onMessage(evt) {
-	processData(evt.data);
-}
-
-function sendMessage(message) {
-	websocket.send(message);
-}
 
 function processData(data) {
+	alert("da");
 	var json = JSON.parse(data);
-
-
 	// Player Cards
   	var cards = json[1].cards;
   	var players = json[0].players[0].length;
