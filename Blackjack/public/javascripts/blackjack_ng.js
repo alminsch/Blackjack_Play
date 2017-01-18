@@ -32,21 +32,18 @@ blackjackApp.controller('blackjackController', function ($scope, $http){
 	
 	$http.get('/json').success(function(res) {
 		
-		$scope.displayJson = function() {
-			
-			json[3].statusline[0]
-			alert(res[3].statusline[0]);
-		}	
 		
  		$scope.jsonCommand = function(jsonCommand) {
  			$http.get('/json/'+jsonCommand).success(function(data) {
+ 				$scope.scopestatusline = data[3].statusline[0];
+ 				$scope.table = data;
  				processData(data);
        	   }); 
  		}
        
  		$scope.jsonNewPlayer = function() {
  			var playername = $("#inputname").val();
- 			$http.post('/newPlayer/'+playername).success(function(data) {
+ 			$http.get('/newPlayer/'+playername).success(function(data) {
  				processData(data);   
  			});
 		}

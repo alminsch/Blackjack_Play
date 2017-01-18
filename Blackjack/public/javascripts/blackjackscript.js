@@ -3,27 +3,46 @@ var websocket;
 var maxAmountCards = 6;
 
 window.onload = getCards();
-
+		
 function getCards() {
-$.get('/json',
-	function(data) {
-		processData(data);
-});
+	websocket = new WebSocket(uri);
+	websocket.onopen = function() { onOpen() }; 
+	websocket.onclose = function() { onClose() };
+	websocket.onmessage = function(evt) { onMessage(evt) };
+	$.get('/socket');
+	//$.get('/json',
+    	//function(data) {
+		//	processData(data);
+	//});
 }
     	
 function jsonCommand(command) {
-$.post('/json/' + command,
-	function(data) {
-		processData(data);
-	});
+	sendMessage(command);
+//$.post('/json/' + command,
+	//function(data) {
+	//	processData(data);
+	//});
 }
-
 function jsonNewPlayer() {
 	var name = $("#inputname").val();
-	$.post('/newPlayer/' + name,
+	//sendMessage("newplayer:"+name);
+	$.get('/newPlayer/' + name,
 		function(data) {
 			processData(data);	
 	});
+}
+function onOpen() {
+	//window.alert("CONNECTED");
+	jsonCommand("null");
+}
+function onClose() {
+	//window.alert("DISCONNECTED");
+}
+function onMessage(evt) {
+	processData(evt.data);
+}
+function sendMessage(message) {
+	websocket.send(message);
 }
 
 

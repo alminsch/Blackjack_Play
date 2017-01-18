@@ -10,15 +10,16 @@ GET		/blackjack/:command			controllers.BlackjackController.blackjack(command: St
 GET		/blackjack					controllers.BlackjackController.index(command: String="")
 GET     /rules                		controllers.BlackjackController.rules()
 
-POST	/newPlayer/:playername		controllers.BlackjackController.addNewPlayer(playername: String)
+GET		/newPlayer/:playername		controllers.BlackjackController.addNewPlayer(playername: String)
 GET     /json                       controllers.BlackjackController.json(command: String="")
-POST	/json/:command				controllers.BlackjackController.jsonCommand(command: String)
+GET		/json/:command				controllers.BlackjackController.jsonCommand(command: String)
+
+GET /socket 						controllers.BlackjackController.createWebSocket()
 
 # Implememtation using Angular.js
 GET     /blackjack.html                controllers.Assets.at(path="/public/html", file="blackjack.html")
 GET     /blackjack_ng.js     			controllers.Assets.at(path="/public/javascripts", file="blackjack_ng.js")
 GET     /blackjack.css                 controllers.Assets.at(path="/public/stylesheets", file="blackjack.css")
-GET		/sudoku9.json	            controllers.Assets.at(path="/public/data", file="sudoku9.json")
 
 # Map static resources from the /public folder to the /assets URL path
 GET     /assets/*file               controllers.Assets.versioned(path="/public", file: Asset)

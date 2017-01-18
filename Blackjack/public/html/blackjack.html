@@ -3,7 +3,6 @@
 <html ng-app="blackjackApp" lang="en">
     <head>
         <title>Blackjack</title>
-        <link rel="stylesheet" href="/blackjack.css">
 
         <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
     	<script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
@@ -18,8 +17,10 @@
 		<!-- Angular -->
         <script src="http://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.8/angular.min.js"></script>
 		<script src="http:////ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-sanitize.js"></script>
-        <script type="text/javascript" src="/blackjack_ng.js"></script>
+        <script type="text/javascript" src="blackjack_ng.js"></script>
+        
         <script type="text/javascript" src="../javascripts/blackjackscript.js"></script>
+        <link rel="stylesheet" href="/blackjack.css">
         
     </head>
     <body ng-controller="blackjackController" id="backGround">
@@ -75,8 +76,8 @@
 					<button type="button" class="btn btn-default btn-block" id="total-field" disabled>Total</button>
 				</div>
 				<div class="col-md-1">
-					<button type="button" class="btn btn-default btn-block" ng-click="jsonCommand('-')">- Bet</button>
 					<button type="button" class="btn btn-default btn-block" ng-click="jsonCommand('+')">+ Bet</button>
+					<button type="button" class="btn btn-default btn-block" ng-click="jsonCommand('-')">- Bet</button>
 					<button type="button" class="btn btn-default btn-block" ng-click="jsonCommand('sb')">Set Bet</button>	
 				</div>
 			</div>
