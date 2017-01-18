@@ -24,27 +24,32 @@ blackjackApp.directive('blackjackPlayer' , function () {
 	}; 
 });
 
+
 blackjackApp.controller('blackjackController', function ($scope, $http){
-	
+	this.$onInit = function() {
+		alert("hihhkj");
+		$http.get('/json').success(function(data) {
+				alert("jjhjkkjkljkj");
+				$scope.table = data;
+   	   	});
+	}
 	$scope.load = function () {
-		getCards();
+ 			$http.get('/json').success(function(data) {
+ 				$scope.table = data;
+       	   });
 	}
 	
-	$http.get('/json').success(function(res) {
-		
-		
+	$http.get('/json').success(function(res) {	
  		$scope.jsonCommand = function(jsonCommand) {
  			$http.get('/json/'+jsonCommand).success(function(data) {
- 				$scope.scopestatusline = data[3].statusline[0];
  				$scope.table = data;
- 				processData(data);
        	   }); 
  		}
        
  		$scope.jsonNewPlayer = function() {
  			var playername = $("#inputname").val();
  			$http.get('/newPlayer/'+playername).success(function(data) {
- 				processData(data);   
+ 				$scope.table = data;  
  			});
 		}
      });   

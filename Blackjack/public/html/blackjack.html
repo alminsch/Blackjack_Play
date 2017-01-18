@@ -19,7 +19,6 @@
 		<script src="http:////ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-sanitize.js"></script>
         <script type="text/javascript" src="blackjack_ng.js"></script>
         
-        <script type="text/javascript" src="../javascripts/blackjackscript.js"></script>
         <link rel="stylesheet" href="/blackjack.css">
         
     </head>
@@ -72,8 +71,8 @@
 				</div>
 				<div class="col-md-2"></div>
 				<div class="col-md-2">
-					<button type="button" class="btn btn-default btn-block "id="bet-field" disabled>Bet </button>
-					<button type="button" class="btn btn-default btn-block" id="total-field" disabled>Total</button>
+					<button type="button" class="btn btn-default btn-block "id="bet-field" disabled>Bet {{table[4].bet[0]}}</button>
+					<button type="button" class="btn btn-default btn-block" id="total-field" disabled>Total {{table[4].bet[1]}}</button>
 				</div>
 				<div class="col-md-1">
 					<button type="button" class="btn btn-default btn-block" ng-click="jsonCommand('+')">+ Bet</button>
@@ -136,4 +135,6 @@
 		    </div>
 		</div>	
     </body>
+    <p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p>
+    
 </html>
