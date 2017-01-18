@@ -1,0 +1,120 @@
+.footer {
+	display: block;
+	background-color: #f9f9f9;
+	border-top: .05rem solid #e5e5e5;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+	position: absolute;
+    width: 100%;
+    bottom: 0;
+}
+
+
+.float-xs-right {
+    float: right !important;
+}
+
+#backGround {
+	background-image: url("/images/bj.jpg");
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center center;
+}
+
+#jumbHead {
+	font-size: 6em;
+    text-shadow: 2px 2px 4px #4d4d4d;
+}
+
+.list-group {
+	margin-bottom: -350%;
+}
+
+.img-responsive {
+	-moz-border-radius: 6px;
+	border-radius: 6px;
+	-webkit-border-radius: 6px;
+	max-width: 62%;
+    height: auto;
+}
+
+.cardlevel1 {
+    border-radius:6px;
+    position: relative;
+    z-index: 1;
+}
+
+.cardlevel2 {
+    position: relative;
+    z-index: 2;
+    top: -7em;
+}
+
+.cardlevel3 {
+    position: relative;
+    top: -14em;
+    z-index: 3;
+}
+
+.cardlevel4 {
+    position: relative;
+    top: -21em;
+    z-index: 4;
+}
+
+.cardlevel5 {
+    position: relative;
+    top: -28em;
+    z-index: 5;
+}
+
+.cardlevel6 {
+    position: relative;
+    top: -35em;
+    z-index: 6;
+}
+
+.cardlevel7  {
+    position: relative;
+    top: -42em;
+    z-index: 7;
+}
+
+.cardlevel8  {
+    position: relative;
+    top: -49em;
+    z-index: 8;
+}
+
+.display-font {
+	font-size: 1.2em;
+	color: black;
+}
+
+.display-name-font {
+	font-size: 1.4em;
+	color: black;
+}
+	
+
+#statusline {
+	text-align: center;
+	color: black;
+	font-weight: bold;
+	font-size: 1.5em;
+}
+
+#blackjack-header {
+	font-size: 8em;
+    color: black;
+    text-shadow: 2px 2px 4px #4d4d4d;
+}
+
+.abstand {
+	margin-top:1.9em;
+}
+
+.jumbotron{
+	background-color:#f6f6f6 !important; 
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
